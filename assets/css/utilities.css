@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
  * Utilities.css  v1.0-alpha6
- * Copyright 27/04/2023
+ * Copyright 01/05/2023
  */
  /* Reboot */
 *, *::before, *::after {
@@ -60,7 +60,7 @@
 	--bg-dark: #343a40;
 	--bg-light: #f8f9fa;
 	--bg-white: #fff;
-	--bg-success: #28a745;
+	--bg-success: #DCEDC8;
 	--bg-danger: #dc3545;
 	--bg-warning: #ffc107;
 	--bg-info: #17a2b8;
@@ -225,6 +225,20 @@ mark, .mark {
 	--text-opacity: 1;
 	color: rgba(255, 255, 255, 0.5) !important;
 }
+.bg-primary {background-color: var(--bg-primary) !important}
+.bg-secondary {background-color: var(--bg-secondary) !important}
+.bg-success {background-color: var(--bg-success) !important}
+.bg-info {background-color: var(--bg-info) !important}
+.bg-warning {background-color: var(--bg-warning) !important}
+.bg-danger {background-color: var(--bg-danger) !important}
+.bg-light {background-color: var(--bg-light) !important}
+.bg-highlight {background-color: var(--bg-highlight) !important}
+.bg-dark {background-color: var(--bg-dark) !important}
+.bg-body {background-color: var(--bg-body) !important}
+.bg-white {background-color: var(--bg-white) !important}
+.bg-transparent {background-color: transparent !important}
+.bg-gradient {background-image: var(--bg-gradient) !important}
+
 .lowercase {text-transform: lowercase !important}
 .capitalize {text-transform: capitalize !important}
 .uppercase {text-transform: uppercase !important}
@@ -251,9 +265,6 @@ mark, .mark {
 .d-flex {display: flex !important}
 .d-inline-flex {display: inline-flex !important}
 
-.bg-white {background-color: rgb(255 255 255/1)}
-.bg-light {background-color: #f8f9fa !important}
-.bg-dark {background-color: #343a40 !important}
 .shadow {box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px !important}
 .overflow-auto {overflow: auto !important}
 .overflow-hidden {overflow: hidden !important}
@@ -299,7 +310,7 @@ table.border-less * {border: 0 !important}
 table.vertical-top tbody {vertical-align: top}
 
 .flex-fill {flex: 1 1 auto !important}
-.flex-row {flex-direction: row}
+/*.flex-row {flex-direction: row} */
 .flex-column {flex-direction: column !important}
 .flex-row-reverse {flex-direction: row-reverse !important}
 .flex-column-reverse {flex-direction: column-reverse !important}
