@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
- * Utilities.css  v1.0-alpha6
- * Copyright 01/05/2023
+ * Utilities.css  v1.0-alpha7
+ * Copyright 31/01/2024
  */
  /* Reboot */
 *, *::before, *::after {
@@ -215,7 +215,7 @@ mark, .mark {
 }
 .text-muted {
 	--text-opacity: 1;
-	color: var(--secondary-color) !important;
+	color: var(--text-muted) !important;
 }
 .text-black-50 {
 	--text-opacity: 1;
@@ -878,9 +878,7 @@ table.vertical-top tbody {vertical-align: top}
 .vh-100 {height: 100vh !important}
 .min-vh-100 {min-height: 100vh !important}
 
-.gap-5 {
-    gap: 3rem !important;
-  }
+.gap-5 {gap: 3rem !important}
 /*------ Small 550px ------*/
 @media (min-width: 550px) {
 	.d-sm-inline {display: inline !important}
@@ -1348,7 +1346,15 @@ table.vertical-top tbody {vertical-align: top}
 	.pr-sm-80 {padding-right: 80px !important}
 	.pb-sm-80 {padding-bottom: 80px !important}
 	.pl-sm-80 {padding-left: 80px !important}
-	
+
+	.fs-sm-90 {font-size: 90px !important}
+	.fs-sm-85 {font-size: 85px !important}
+	.fs-sm-80 {font-size: 80px !important}
+	.fs-sm-75 {font-size: 75px !important}
+	.fs-sm-70 {font-size: 70px !important}
+	.fs-sm-55 {font-size: 65px !important}
+	.fs-sm-60 {font-size: 60px !important}
+	.fs-sm-55 {font-size: 55px !important}
 	.fs-sm-50 {font-size: 50px !important}
 	.fs-sm-48 {font-size: 48px !important}
 	.fs-sm-46 {font-size: 46px !important}
@@ -1376,6 +1382,8 @@ table.vertical-top tbody {vertical-align: top}
 	.fs-sm-16 {font-size: 16px !important}
 	.fs-sm-15 {font-size: 15px !important}
 	.fs-sm-14 {font-size: 14px !important}
+	.fs-sm-13 {font-size: 13px !important}
+	.fs-sm-12 {font-size: 12px !important}
 	.rti-sm-x2 {padding-top: 200%}
 	.rti-sm-150 {padding-top: 150%}
 	.rti-sm-130 {padding-top: 130%}
@@ -1881,8 +1889,95 @@ table.vertical-top tbody {vertical-align: top}
 	.pr-md-85 {padding-right: 85px !important}
 	.pb-md-85 {padding-bottom: 85px !important}
 	.pl-md-85 {padding-left: 85px !important}
+	.m-md-90 {margin: 90px !important}
+	.my-md-90 {
+		margin-top: 90px !important;
+		margin-bottom: 90px !important;
+	}
+	.mx-md-90 {
+		margin-left: 90px !important;
+		margin-right: 90px !important;
+	}
+	.mt-md-90 {margin-top: 90px !important}
+	.mr-md-90 {margin-right: 90px !important}
+	.mb-md-90 {margin-bottom: 90px !important}
+	.ml-md-90 {margin-left: 90px !important}
+	.p-md-90 {padding: 90px !important}
+	.py-md-90 {
+		padding-top: 90px !important;
+		padding-bottom: 90px !important;
+	}
+	.px-md-90 {
+		padding-left: 90px !important;
+		padding-right: 90px !important;
+	}
+	.pt-md-90 {padding-top: 90px !important}
+	.pr-md-90 {padding-right: 90px !important}
+	.pb-md-90 {padding-bottom: 90px !important}
+	.pl-md-90 {padding-left: 90px !important}
+	.m-md-95 {margin: 95px !important}
+	.my-md-95 {
+		margin-top: 95px !important;
+		margin-bottom: 95px !important;
+	}
+	.mx-md-95 {
+		margin-left: 95px !important;
+		margin-right: 95px !important;
+	}
+	.mt-md-95 {margin-top: 95px !important}
+	.mr-md-95 {margin-right: 95px !important}
+	.mb-md-95 {margin-bottom: 95px !important}
+	.ml-md-95 {margin-left: 95px !important}
+	.p-md-95 {padding: 95px !important}
+	.py-md-95 {
+		padding-top: 95px !important;
+		padding-bottom: 95px !important;
+	}
+	.px-md-95 {
+		padding-left: 95px !important;
+		padding-right: 95px !important;
+	}
+	.pt-md-95 {padding-top: 95px !important}
+	.pr-md-95 {padding-right: 95px !important}
+	.pb-md-95 {padding-bottom: 95px !important}
+	.pl-md-95 {padding-left: 95px !important}
+	.m-md-100 {margin: 100px !important}
+	.my-md-100 {
+		margin-top: 100px !important;
+		margin-bottom: 100px !important;
+	}
+	.mx-md-100 {
+		margin-left: 100px !important;
+		margin-right: 100px !important;
+	}
+	.mt-md-100 {margin-top: 100px !important}
+	.mr-md-100 {margin-right: 100px !important}
+	.mb-md-100 {margin-bottom: 100px !important}
+	.ml-md-100 {margin-left: 100px !important}
+	.p-md-100 {padding: 100px !important}
+	.py-md-100 {
+		padding-top: 100px !important;
+		padding-bottom: 100px !important;
+	}
+	.px-md-100 {
+		padding-left: 100px !important;
+		padding-right: 100px !important;
+	}
+	.pt-md-100 {padding-top: 100px !important}
+	.pr-md-100 {padding-right: 100px !important}
+	.pb-md-100 {padding-bottom: 100px !important}
+	.pl-md-100 {padding-left: 100px !important}
+	
+	.fs-md-120 {font-size: 120px !important}
+	.fs-md-110 {font-size: 110px !important}	
+	.fs-md-100 {font-size: 100px !important}
+	.fs-md-95 {font-size: 95px !important}
+	.fs-md-90 {font-size: 90px !important}
+	.fs-md-85 {font-size: 85px !important}
 	.fs-md-80 {font-size: 80px !important}
+	.fs-md-75 {font-size: 75px !important}
 	.fs-md-70 {font-size: 70px !important}
+	.fs-md-65 {font-size: 65px !important}
 	.fs-md-60 {font-size: 60px !important}
 	.fs-md-55 {font-size: 55px !important}
 	.fs-md-50 {font-size: 50px !important}
@@ -1913,6 +2008,7 @@ table.vertical-top tbody {vertical-align: top}
 	.fs-md-15 {font-size: 15px !important}
 	.fs-md-14 {font-size: 14px !important}
 	.fs-md-13 {font-size: 13px !important}
+	.fs-md-12 {font-size: 12px !important}
 	.rti-md-x2 {padding-top: 200%}
 	.rti-md-150 {padding-top: 150%}
 	.rti-md-130 {padding-top: 130%}
