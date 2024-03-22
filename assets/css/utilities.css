@@ -1,12 +1,9 @@
 @charset "UTF-8";
 /*!
- * Utilities.css - v1.0-alpha8
- * Copyright 31/01/2024
+ * Utilities.css for Flatsome - v1.0.1
+ * Copyright 22/03/2024
  */
- /* Reboot */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
+
 :root, [data-theme="light"] {
 	--blue: #007bff;
 	--indigo: #6610f2;
@@ -24,15 +21,6 @@
 	--black: #000;
 	--gray: #6c757d;
 	--gray-dark: #343a40;
-	--gray-100: #f8f9fa;
-	--gray-200: #EEEEEE;
-	--gray-300: #E0E0E0;
-	--gray-400: #BDBDBD;
-	--gray-500: #9E9E9E;
-	--gray-600: #757575;
-	--gray-700: #616161;
-	--gray-800: #424242;
-	--gray-900: #212121;
 	--primary: #0d6efd;
 	--secondary: #7c0fd1;
 	--tertiary: #046a38;
@@ -52,9 +40,19 @@
 	--dark-rgb: 33, 37, 41;
 	--white-rgb: 255, 255, 255;
 	--black-rgb: 0, 0, 0;
+
+	--font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	--gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+	--body-font-family: var(--font-sans-serif);
+	--body-font-size: 1rem;
+	--body-font-weight: 400;
+	--body-line-height: 1.5;
+	--body-color: #212529;
+	--body-color-rgb: 33, 37, 41;
+	--body-bg: #fff;
+	--body-bg-rgb: 255, 255, 255;
 	
-	--bg-body-rgb: 255, 255, 255;
-	--bg-body: #FFF;
 	--bg-primary: #FFF;
 	--bg-secondary: #343434;
 	--bg-tertiary: #343434;
@@ -65,7 +63,6 @@
 	--bg-danger: #dc3545;
 	--bg-warning: #ffc107;
 	--bg-info: #17a2b8;
-	--bg-highlight: #fff3cd;
 
 	--text-body: #000;
 	--text-color: #000;
@@ -83,14 +80,18 @@
 	--text-warning: #ffc107;
 	--text-info: #17a2b8;
 	--text-muted: rgba(102, 102, 102, .7);
-	
-	--link-color: #7c0fd1;
+	--text-line-clamp: 2;
+
+	--link-color: rgb(124, 15, 209);
 	--link-hover-color: #365df5;
 	--link-color-primary: #262626;
 	--link-color-secondary: #0c5dff;
-	--link-color-rgb: ;
-	--link-decoration: underline;
-	--link-hover-color-rgb: ;
+	--link-color-rgb: 124, 15, 209;
+	--link-decoration: none;
+	--link-hover-color-rgb: 124, 15, 209;
+	--code-color: #d63384;
+	--highlight-color: #212529;
+	--highlight-bg: #fff3cd;
 
 	--border-width: 1px;
 	--border-style: solid;
@@ -112,8 +113,19 @@
 	--box-shadow-sm: 0 0.125rem 0.25rem rgba(var(--body-color-rgb), 0.075);
 	--box-shadow-lg: 0 1rem 3rem rgba(var(--body-color-rgb), 0.175);
 	--box-shadow-inset: inset 0 1px 2px rgba(var(--body-color-rgb), 0.075);
+	--focus-ring-width: 0.25rem;
+	--focus-ring-opacity: 0.25;
+	--focus-ring-color: rgba(13, 110, 253, 0.25);
+	--form-valid-color: #198754;
+	--form-valid-border-color: #198754;
+	--form-invalid-color: #dc3545;
+	--form-invalid-border-color: #dc3545;
 }
 
+ /* Reboot */
+ *, *::before, *::after {
+    box-sizing: border-box;
+}
 @media (prefers-reduced-motion: no-preference) {
 	:root {
 		scroll-behavior: smooth;
@@ -127,22 +139,46 @@ html {
 /* Remove the margin in all browsers. */
 body {
 	margin: 0;
+	min-height: 100vh;
+	font-family: var(--body-font-family);
+	font-size: var(--body-font-size);
+	font-weight: var(--body-font-weight);
+	line-height: var(--bs-body-line-height);
+	color: var(--body-color);
+	text-align: var(--body-text-align);
+	background-color: var(--body-bg);
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 }
+hr {
+	margin: 1rem 0;
+	color: inherit;
+	border: 0;
+	border-top: var(--border-width) solid;
+	opacity: 0.25;
+}
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+	line-height: 1.2;
+	color: var(--heading-color);
+}
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {display: block}
-audio, canvas, progress,
-video {display: inline-block}
+audio, canvas, progress, video {display: inline-block}
 audio:not([controls]) {
 	display: none;
 	height: 0;
 }
 progress {vertical-align: baseline}
-[hidden],
-template {display: none}
+[hidden] {display: none !important;}
 figure {margin: 0 0 1rem}
 img, svg {vertical-align: middle}
 small {font-size: 80%}
@@ -154,26 +190,63 @@ sub, sup {
 }
 sub {bottom: -0.25em}
 sup {top: -0.5em}
-.text-2line {
+mark, .mark {
+	padding: 0.1875em;
+	color: var(--highlight-color);
+	background-color: var(--highlight-bg);
+}
+pre, code, kbd, samp {
+  font-family: var(--font-monospace);
+  font-size: 1em;
+}
+pre {
+	display: block;
+	margin-top: 0;
+	margin-bottom: 1rem;
+	overflow: auto;
+	font-size: 0.875em;
+}
+pre code {
+	font-size: inherit;
+	color: inherit;
+	word-break: normal;
+}
+code {
+	font-size: 0.875em;
+	color: var(--code-color);
+	word-wrap: break-word;
+}
+a > code {
+	color: inherit;
+}
+a {
+	color: rgba(var(--link-color-rgb), var(--link-opacity, 1));
+	text-decoration: var(--link-decoration);
+}
+a:hover {
+	--link-color-rgb: var(--link-hover-color-rgb);
+}
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
+	color: inherit;
+	text-decoration: none;
+}
+.aa {
+	height: 30px;
+}
+.text-n-line, .text-2line {
+	--text-n-line: var(--text-line-clamp, 2);
+	display: -webkit-box;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
+	-webkit-line-clamp: var(--text-n-line, --text-line-clamp);
 }
-mark, .mark {
-  padding: 0.1875em;
-  background-color: var(--highlight-bg);
-}
-
-
 .text-wrap {white-space: normal !important}
 .text-nowrap {white-space: nowrap !important}
 .text-break {
 	word-wrap: break-word !important;
 	word-break: break-word !important;
 }
-
 .text-primary {color: var(--primary)!important}
 .text-secondary {color: var(--secondary)!important}
 .text-tertiary {color: var(--tertiary)!important}
@@ -196,7 +269,6 @@ mark, .mark {
 .bg-warning {background-color: var(--bg-warning) !important}
 .bg-danger {background-color: var(--bg-danger) !important}
 .bg-light {background-color: var(--bg-light) !important}
-.bg-highlight {background-color: var(--bg-highlight) !important}
 .bg-dark {background-color: var(--bg-dark) !important}
 .bg-body {background-color: var(--bg-body) !important}
 .bg-white {background-color: var(--bg-white) !important}
@@ -205,19 +277,30 @@ mark, .mark {
 
 .lowercase {text-transform: lowercase !important}
 .capitalize {text-transform: capitalize !important}
-.uppercase {text-transform: uppercase !important}
+.uppercase, .is-uppercase {text-transform: uppercase !important}
 .text-justify {text-align: justify !important}
-.fst-italic {font-style: italic !important}
+.fst-italic, .is-italic {font-style: italic !important}
 .fst-normal {font-style: normal !important}
 .fw-lighter {font-weight: lighter !important}
 .fw-300 {font-weight: 300 !important}
-.fw-400 {font-weight: 400 !important}
+.fw-400, .is-normal {font-weight: 400 !important}
 .fw-500 {font-weight: 500 !important}
 .fw-600 {font-weight: 600 !important}
-.fw-700 {font-weight: 700 !important}
+.fw-700, .is-bold, .strong {font-weight: 700 !important}
+.fw-800 {font-weight: 600 !important}
+.fw-900 {font-weight: 700 !important}
 .fw-bolder {font-weight: bolder !important}
 .relative {position: relative !important}
 .absolute {position: absolute !important}
+.fixed {position: fixed !important}
+.sticky {
+	position: -webkit-sticky !important;
+	position: sticky !important;
+}
+.top {top: 0}
+.right {right: 0}
+.left {left: 0}
+.bottom {bottom: 0}
 .d-none {display: none !important}
 .d-inline {display: inline !important}
 .d-inline-block {display: inline-block !important}
@@ -229,21 +312,28 @@ mark, .mark {
 .d-flex {display: flex !important}
 .d-inline-flex {display: inline-flex !important}
 
-.shadow {box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px !important}
+.shadow {box-shadow: var(--box-shadow) !important}
 .overflow-auto {overflow: auto !important}
 .overflow-hidden {overflow: hidden !important}
 .visible {visibility: visible !important}
-.invisible {visibility: hidden !important}
-.opacity-0 {opacity: 0 !important}
-.opacity-25 {opacity: 0.25 !important}
-.opacity-50 {opacity: 0.5 !important}
-.opacity-75 {opacity: 0.75 !important}
-.opacity-100 {opacity: 1 !important}
+.invisible {opacity: 0; visibility: hidden !important}
+.opacity-0, .op-0 {opacity: 0 !important}
+.opacity-25, .op-25 {opacity: 0.25 !important}
+.opacity-50, .op-5 {opacity: 0.5 !important}
+.opacity-75, .op-75 {opacity: 0.75 !important}
+.opacity-100, .op-100 {opacity: 1 !important}
 .z-n1 {z-index: -1 !important}
 .z-0 {z-index: 0 !important}
 .z-1 {z-index: 1 !important}
 .z-2 {z-index: 2 !important}
 .z-3 {z-index: 3 !important}
+.z-4 { z-index:4 !important}
+.z-5 { z-index:5 !important}
+.z-top { z-index:9995 !important}
+.z-top-2 { z-index:9997 !important}
+.z-top-3 { z-index:9999 !important}
+.no-click {pointer-events: none !important}
+.no-wrap {white-space: nowrap !important}
 .rounded {border-radius: var(--border-radius) !important}
 .rounded-0 {border-radius: 0 !important}
 .rounded-sm {border-radius: var(--border-radius-sm) !important}
@@ -1988,4 +2078,22 @@ table.vertical-top tbody {vertical-align: top}
 	.rti-md-56 {padding-top: 56.25%}
 	.rti-md-25 {padding-top: 25%}
 	.flex-md-5 {flex: 0 0 20%}
+}
+.fullscreen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: auto;
+}
+.fullpage {
+	height: calc( 100vh - var(--top-e, 0px) - var(--bottom-e, 0px) ) !important;
+    overflow: hidden;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.fullwidth {
+    width: 100vw;
+	margin-left: calc(50% - 50vw) !important;
 }
