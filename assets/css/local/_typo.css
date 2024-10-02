@@ -1,0 +1,263 @@
+/*! Text for LocalCSS ✨ v1.0.1 | MIT License
+ * Copyright 2023-2024 REDX.Media.
+ * Date 11/05/2024
+ */
+:root {
+	--FONT-FAMILIES-----------------: #01;
+	--font-sans: sans-serif;
+	--font-serif: serif;
+	--font-mono: monospace;
+	--FONT-WEIGHTS------------------: #02;
+	--ultralight: 100;
+	--extralight: 200;
+	--light: 300;
+	--regular: 400;
+	--medium: 500;
+	--semibold: 600;
+	--bold: 700;
+	--extrabold: 800;
+	--ultrabold: 900;
+}
+.fs-8 {font-size: 8px !important}
+.fs-10 {font-size: 10px !important}
+.fs-11 {font-size: 11px !important}
+.fs-12 {font-size: 12px !important}
+.fs-13 {font-size: 13px !important}
+.fs-14 {font-size: 14px !important}
+.fs-15 {font-size: 15px !important}
+.fs-16 {font-size: 16px !important}
+.fs-18 {font-size: 18px !important}
+.fs-20 {font-size: 20px !important}
+.fs-22 {font-size: 22px !important}
+.fs-24 {font-size: 24px !important}
+.fs-26 {font-size: 26px !important}
+.fs-28 {font-size: 28px !important}
+.fs-30 {font-size: 30px !important}
+.fs-32 {font-size: 32px !important}
+.fs-36 {font-size: 36px !important}
+.fs-40 {font-size: 40px !important}
+.fs-44 {font-size: 44px !important}
+.fs-48 {font-size: 48px !important}
+.fs-52 {font-size: 52px !important}
+.fs-56 {font-size: 56px !important}
+.fs-60 {font-size: 60px !important}
+.fs-64 {font-size: 64px !important}
+.fs-72 {font-size: 72px !important}
+.fs-80 {font-size: 80px !important}
+.fs-88 {font-size: 88px !important}
+.fs-96 {font-size: 96px !important}
+.fs-112 {font-size: 112px !important}
+.fs-128 {font-size: 128px !important}
+.fs-144 {font-size: 144px !important}
+.fs-160 {font-size: 160px !important}
+.fs-192 {font-size: 192px !important}
+.fs-224 {font-size: 224px !important}
+.fs-256 {font-size: 256px !important}
+
+.lh-1 {line-height: 1 !important}
+.lh-sm {line-height: 1.25 !important}
+.lh-base {line-height: 1.5 !important}
+.lh-lg {line-height: 2 !important}
+.text-left {text-align: left !important}
+.text-center {text-align: center !important}
+.text-right {text-align: right !important}
+.text-justify {text-align: justify !important}
+.underline, .focus\.underline:focus, .group:hover .group-hover\.underline, .hover\.underline:hover {text-decoration: underline !important}
+.overline, .focus\.overline:focus, .group:hover .group-hover\.overline, .hover\.overline:hover {text-decoration: overline !important}
+.line-through, .focus\.line-through:focus, .group:hover .group-hover\.line-through, .hover\.line-through:hover {text-decoration: line-through !important}
+.no-underline, .focus\.no-underline:focus, .group:hover .group-hover\.no-underline, .hover\.no-underline:hover {text-decoration: none !important}
+.decoration-solid, .focus\.decoration-solid:focus, .group:hover .group-hover\.decoration-solid, .hover\.decoration-solid:hover {text-decoration-style: solid !important}
+.decoration-double, .focus\.decoration-double:focus, .group:hover .group-hover\.decoration-double, .hover\.decoration-double:hover {text-decoration-style: double !important}
+.decoration-dotted, .focus\.decoration-dotted:focus, .group:hover .group-hover\.decoration-dotted, .hover\.decoration-dotted:hover {text-decoration-style: dotted !important}
+.decoration-dashed, .focus\.decoration-dashed:focus, .group:hover .group-hover\.decoration-dashed, .hover\.decoration-dashed:hover {text-decoration-style: dashed !important}
+.decoration-wavy, .focus\.decoration-wavy:focus, .group:hover .group-hover\.decoration-wavy, .hover\.decoration-wavy:hover {text-decoration-style: wavy !important}
+.clip {text-overflow: clip !important}
+.ellipsis {text-overflow: ellipsis !important}
+.uppercase {text-transform: uppercase !important}
+.lowercase {text-transform: lowercase !important}
+.capitalize {text-transform: capitalize !important}
+.space-normal {white-space: normal !important}
+.space-nowrap {white-space: nowrap !important}
+.space-pre {white-space: pre !important}
+.space-pre-wrap {white-space: pre-wrap !important}
+.space-pre-line {white-space: pre-line !important}
+.space-break {white-space: break-spaces !important}
+.break-normal {word-break: normal !important}
+.break-all {word-break: break-all !important}
+.break-keep {word-break: keep-all !important}
+.break-word {word-break: break-word !important}
+.font-sans {font-family: var(--font-sans)}
+.font-serif {font-family: var(--font-serif)}
+.font-mono {font-family: var(--font-mono)}
+.italic, .fst-italic {font-style: italic !important}
+.normal, .fst-normal {font-style: normal !important}
+.ultralight, .fw-ultralight .hover\.ultralight:hover {font-weight: var(--ultralight) !important}
+.extralight, .fw-extralight, .hover\.extralight:hover {font-weight: var(--extralight) !important}
+.light, .fw-light, .hover\.light:hover {font-weight: var(--light) !important}
+.regular, .fw-normal, .hover\.regular:hover {font-weight: var(--regular) !important}
+.medium, .fw-medium .hover\.medium:hover {font-weight: var(--medium) !important}
+.semibold, .fw-semibold, .hover\.semibold:hover {font-weight: var(--semibold) !important}
+.bold, .fw-bold, .hover\.bold:hover {font-weight: var(--bold) !important}
+.extrabold, .fw-extrabold, .hover\.extrabold:hover {font-weight: var(--extrabold) !important}
+.ultrabold, .fw-ultrabold, .hover\.ultrabold:hover {font-weight: var(--ultrabold) !important}
+.text-n-line, .text-2line {
+	--n-line: 2;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: var(--n-line);
+}
+
+/* SM */
+@media (min-width: 576px) {
+	.sm\:fs-8 {font-size: 8px !important}
+	.sm\:fs-10 {font-size: 10px !important}
+	.sm\:fs-11 {font-size: 11px !important}
+	.sm\:fs-12 {font-size: 12px !important}
+	.sm\:fs-13 {font-size: 13px !important}
+	.sm\:fs-14 {font-size: 14px !important}
+	.sm\:fs-15 {font-size: 15px !important}
+	.sm\:fs-16 {font-size: 16px !important}
+	.sm\:fs-18 {font-size: 18px !important}
+	.sm\:fs-20 {font-size: 20px !important}
+	.sm\:fs-22 {font-size: 22px !important}
+	.sm\:fs-24 {font-size: 24px !important}
+	.sm\:fs-26 {font-size: 26px !important}
+	.sm\:fs-28 {font-size: 28px !important}
+	.sm\:fs-30 {font-size: 30px !important}
+	.sm\:fs-32 {font-size: 32px !important}
+	.sm\:fs-36 {font-size: 36px !important}
+	.sm\:fs-40 {font-size: 40px !important}
+	.sm\:fs-44 {font-size: 44px !important}
+	.sm\:fs-48 {font-size: 48px !important}
+	.sm\:fs-52 {font-size: 52px !important}
+	.sm\:fs-56 {font-size: 56px !important}
+	.sm\:fs-60 {font-size: 60px !important}
+	.sm\:fs-64 {font-size: 64px !important}
+	.sm\:fs-72 {font-size: 72px !important}
+	.sm\:fs-80 {font-size: 80px !important}
+	.sm\:fs-88 {font-size: 88px !important}
+	.sm\:fs-96 {font-size: 96px !important}
+	.sm\:fs-112 {font-size: 112px !important}
+	.sm\:fs-128 {font-size: 128px !important}
+	.sm\:fs-144 {font-size: 144px !important}
+	.sm\:fs-160 {font-size: 160px !important}
+	.sm\:fs-192 {font-size: 192px !important}
+	.sm\:fs-224 {font-size: 224px !important}
+	.sm\:fs-256 {font-size: 256px !important}
+}
+/* MD */
+@media (min-width: 768px) {
+	.md\:fs-8 {font-size: 8px !important}
+	.md\:fs-10 {font-size: 10px !important}
+	.md\:fs-11 {font-size: 11px !important}
+	.md\:fs-12 {font-size: 12px !important}
+	.md\:fs-13 {font-size: 13px !important}
+	.md\:fs-14 {font-size: 14px !important}
+	.md\:fs-15 {font-size: 15px !important}
+	.md\:fs-16 {font-size: 16px !important}
+	.md\:fs-18 {font-size: 18px !important}
+	.md\:fs-20 {font-size: 20px !important}
+	.md\:fs-22 {font-size: 22px !important}
+	.md\:fs-24 {font-size: 24px !important}
+	.md\:fs-26 {font-size: 26px !important}
+	.md\:fs-28 {font-size: 28px !important}
+	.md\:fs-30 {font-size: 30px !important}
+	.md\:fs-32 {font-size: 32px !important}
+	.md\:fs-36 {font-size: 36px !important}
+	.md\:fs-40 {font-size: 40px !important}
+	.md\:fs-44 {font-size: 44px !important}
+	.md\:fs-48 {font-size: 48px !important}
+	.md\:fs-52 {font-size: 52px !important}
+	.md\:fs-56 {font-size: 56px !important}
+	.md\:fs-60 {font-size: 60px !important}
+	.md\:fs-64 {font-size: 64px !important}
+	.md\:fs-72 {font-size: 72px !important}
+	.md\:fs-80 {font-size: 80px !important}
+	.md\:fs-88 {font-size: 88px !important}
+	.md\:fs-96 {font-size: 96px !important}
+	.md\:fs-112 {font-size: 112px !important}
+	.md\:fs-128 {font-size: 128px !important}
+	.md\:fs-144 {font-size: 144px !important}
+	.md\:fs-160 {font-size: 160px !important}
+	.md\:fs-192 {font-size: 192px !important}
+	.md\:fs-224 {font-size: 224px !important}
+	.md\:fs-256 {font-size: 256px !important}
+}
+/* LG */
+@media (min-width: 992px) {
+	.lg\:fs-8 {font-size: 8px !important}
+	.lg\:fs-10 {font-size: 10px !important}
+	.lg\:fs-11 {font-size: 11px !important}
+	.lg\:fs-12 {font-size: 12px !important}
+	.lg\:fs-13 {font-size: 13px !important}
+	.lg\:fs-14 {font-size: 14px !important}
+	.lg\:fs-15 {font-size: 15px !important}
+	.lg\:fs-16 {font-size: 16px !important}
+	.lg\:fs-18 {font-size: 18px !important}
+	.lg\:fs-20 {font-size: 20px !important}
+	.lg\:fs-22 {font-size: 22px !important}
+	.lg\:fs-24 {font-size: 24px !important}
+	.lg\:fs-26 {font-size: 26px !important}
+	.lg\:fs-28 {font-size: 28px !important}
+	.lg\:fs-30 {font-size: 30px !important}
+	.lg\:fs-32 {font-size: 32px !important}
+	.lg\:fs-36 {font-size: 36px !important}
+	.lg\:fs-40 {font-size: 40px !important}
+	.lg\:fs-44 {font-size: 44px !important}
+	.lg\:fs-48 {font-size: 48px !important}
+	.lg\:fs-52 {font-size: 52px !important}
+	.lg\:fs-56 {font-size: 56px !important}
+	.lg\:fs-60 {font-size: 60px !important}
+	.lg\:fs-64 {font-size: 64px !important}
+	.lg\:fs-72 {font-size: 72px !important}
+	.lg\:fs-80 {font-size: 80px !important}
+	.lg\:fs-88 {font-size: 88px !important}
+	.lg\:fs-96 {font-size: 96px !important}
+	.lg\:fs-112 {font-size: 112px !important}
+	.lg\:fs-128 {font-size: 128px !important}
+	.lg\:fs-144 {font-size: 144px !important}
+	.lg\:fs-160 {font-size: 160px !important}
+	.lg\:fs-192 {font-size: 192px !important}
+	.lg\:fs-224 {font-size: 224px !important}
+	.lg\:fs-256 {font-size: 256px !important}
+}
+/* XL */
+@media (min-width: 1280px) {
+	.xl\:fs-8 {font-size: 8px !important}
+	.xl\:fs-10 {font-size: 10px !important}
+	.xl\:fs-11 {font-size: 11px !important}
+	.xl\:fs-12 {font-size: 12px !important}
+	.xl\:fs-13 {font-size: 13px !important}
+	.xl\:fs-14 {font-size: 14px !important}
+	.xl\:fs-15 {font-size: 15px !important}
+	.xl\:fs-16 {font-size: 16px !important}
+	.xl\:fs-18 {font-size: 18px !important}
+	.xl\:fs-20 {font-size: 20px !important}
+	.xl\:fs-22 {font-size: 22px !important}
+	.xl\:fs-24 {font-size: 24px !important}
+	.xl\:fs-26 {font-size: 26px !important}
+	.xl\:fs-28 {font-size: 28px !important}
+	.xl\:fs-30 {font-size: 30px !important}
+	.xl\:fs-32 {font-size: 32px !important}
+	.xl\:fs-36 {font-size: 36px !important}
+	.xl\:fs-40 {font-size: 40px !important}
+	.xl\:fs-44 {font-size: 44px !important}
+	.xl\:fs-48 {font-size: 48px !important}
+	.xl\:fs-52 {font-size: 52px !important}
+	.xl\:fs-56 {font-size: 56px !important}
+	.xl\:fs-60 {font-size: 60px !important}
+	.xl\:fs-64 {font-size: 64px !important}
+	.xl\:fs-72 {font-size: 72px !important}
+	.xl\:fs-80 {font-size: 80px !important}
+	.xl\:fs-88 {font-size: 88px !important}
+	.xl\:fs-96 {font-size: 96px !important}
+	.xl\:fs-112 {font-size: 112px !important}
+	.xl\:fs-128 {font-size: 128px !important}
+	.xl\:fs-144 {font-size: 144px !important}
+	.xl\:fs-160 {font-size: 160px !important}
+	.xl\:fs-192 {font-size: 192px !important}
+	.xl\:fs-224 {font-size: 224px !important}
+	.xl\:fs-256 {font-size: 256px !important}
+}

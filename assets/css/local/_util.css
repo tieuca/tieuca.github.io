@@ -1,0 +1,903 @@
+/*! Utilities for LocalCSS ✨ v1.0.1 | MIT License
+ * Copyright 2023-2024 REDX.Media.
+ * Date 11/05/2024
+ */
+ :root {
+	--BORDER-RADIUS-----------------: #01;
+	--border-radius: 0.4rem;
+	--border-radius-sm: 0.2rem;
+	--border-radius-md: 0.6rem;
+	--border-radius-lg: 0.8rem;
+	--border-radius-xl: 1.2rem;
+	--border-radius-pill: 50rem;
+}
+.static {position: static !important}
+.relative {position: relative !important}
+.absolute {position: absolute !important}
+.fixed {position: fixed !important}
+.sticky {position: sticky !important}
+.inline {display: inline !important}
+.block {display: block !important}
+.flex {display: flex !important}
+.grid {display: grid !important}
+.inline-block {display: inline-block !important}
+.inline-flex {display: inline-flex !important}
+.inline-grid {display: inline-grid !important}
+.inline-table {display: inline-table !important}
+.table {display: table !important}
+.table-caption {display: table-caption !important}
+.table-column-group {display: table-column-group !important}
+.table-header-group {display: table-header-group !important}
+.table-footer-group {display: table-footer-group !important}
+.table-row-group {display: table-row-group !important}
+.table-cell {display: table-cell !important}
+.table-column {display: table-column !important}
+.table-row {display: table-row !important}
+.hidden {display: none !important}
+.flow-root {display: flow-root !important}
+.visible {visibility: visible !important}
+.invisible {visibility: hidden !important}
+.border-box {box-sizing: border-box !important}
+.content-box {box-sizing: content-box !important}
+.clear-left {clear: left !important}
+.clear-right {clear: right !important}
+.clear-both {clear: both !important}
+.float-left {float: left !important}
+.float-right {float: right !important}
+.float-none {float: none !important}
+.rounded-0 {border-radius: 0 !important}
+.rounded {border-radius: var(--border-radius) !important}
+.rounded-sm {border-radius: var(--border-radius-sm) !important}
+.rounded-md {border-radius: var(--border-radius-md) !important}
+.rounded-lg {border-radius: var(--border-radius-lg) !important}
+.rounded-xl {border-radius: var(--border-radius-xl) !important}
+.rounded-circle {border-radius: 50% !important}
+.rounded-pill {border-radius: var(--border-radius-pill) !important}
+.rounded-top {
+	border-top-left-radius: var(--border-radius) !important;
+	border-top-right-radius: var(--border-radius) !important;
+}
+.rounded-end {
+	border-top-right-radius: var(--border-radius) !important;
+	border-bottom-right-radius: var(--border-radius) !important;
+}
+.rounded-bottom {
+	border-bottom-right-radius: var(--border-radius) !important;
+	border-bottom-left-radius: var(--border-radius) !important;
+}
+.rounded-start {
+	border-bottom-left-radius: var(--border-radius) !important;
+	border-top-left-radius: var(--border-radius) !important;
+}
+.z-auto, .focus\.z-auto:focus {z-index: auto !important}
+.z-0, .focus\.z-0:focus {z-index: 0 !important}
+.z-1, .focus\.z-1:focus {z-index: 1 !important}
+.z-2, .focus\.z-2:focus {z-index: 2 !important}
+.z-3, .focus\.z-3:focus {z-index: 3 !important}
+.z-4, .focus\.z-4:focus {z-index: 4 !important}
+.z-5, .focus\.z-5:focus {z-index: 5 !important}
+.z-6, .focus\.z-6:focus {z-index: 6 !important}
+.z-7, .focus\.z-7:focus {z-index: 7 !important}
+.z-8, .focus\.z-8:focus {z-index: 8 !important}
+.z-9, .focus\.z-9:focus {z-index: 9 !important}
+.z-10, .focus\.z-10:focus {z-index: 10 !important}
+.xy-0 {
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+}
+.xy-auto {
+	top: auto !important;
+	right: auto !important;
+	bottom: auto !important;
+	left: auto !important;
+}
+.x-0 {
+	left: 0 !important;
+	right: 0 !important;
+}
+.x-auto {
+	left: auto !important;
+	right: auto !important;
+}
+.y-0 {
+	top: 0 !important;
+	bottom: 0 !important;
+}
+.y-auto {
+	top: auto !important;
+	bottom: auto !important;
+}
+.gap-1 {gap: 0.1rem !important}
+.gap-2 {gap: 0.2rem !important}
+.gap-4 {gap: 0.4rem !important}
+.gap-6 {gap: 0.6rem !important}
+.gap-8 {gap: 0.8rem !important}
+.gap-10 {gap: 1rem !important}
+.gap-12 {gap: 1.2rem !important}
+.gap-14 {gap: 1.4rem !important}
+.gap-16 {gap: 1.6rem !important}
+.gap-18 {gap: 1.8rem !important}
+.gap-20 {gap: 2rem !important}
+.gap-24 {gap: 2.4rem !important}
+.gap-28 {gap: 2.8rem !important}
+.gap-32 {gap: 3.2rem !important}
+.flex-fill {flex: 1 1 auto !important}
+.flex-row {flex-direction: row !important}
+.flex-column {flex-direction: column !important}
+.flex-row-reverse {flex-direction: row-reverse !important}
+.flex-column-reverse {flex-direction: column-reverse !important}
+.flex-grow-0 {flex-grow: 0 !important}
+.flex-grow-1 {flex-grow: 1 !important}
+.flex-shrink-0 {flex-shrink: 0 !important}
+.flex-shrink-1 {flex-shrink: 1 !important}
+.flex-wrap {flex-wrap: wrap !important}
+.flex-nowrap {flex-wrap: nowrap !important}
+.flex-wrap-reverse {flex-wrap: wrap-reverse !important}
+.justify-normal {justify-content: normal !important}
+.justify-start {justify-content: flex-start !important}
+.justify-end {justify-content: flex-end !important}
+.justify-center {justify-content: center !important}
+.justify-between {justify-content: space-between !important}
+.justify-around {justify-content: space-around !important}
+.justify-evenly {justify-content: space-evenly !important}
+.justify-stretch {justify-content: stretch !important}
+.align-items-start {align-items: flex-start !important}
+.align-items-end {align-items: flex-end !important}
+.align-items-center {align-items: center !important}
+.align-items-baseline {align-items: baseline !important}
+.align-items-stretch {align-items: stretch !important}
+.align-start {align-content: flex-start !important}
+.align-end {align-content: flex-end !important}
+.align-center {align-content: center !important}
+.align-between {align-content: space-between !important}
+.align-around {align-content: space-around !important}
+.align-stretch {align-content: stretch !important}
+.align-self-auto {align-self: auto !important}
+.align-self-start {align-self: flex-start !important}
+.align-self-end {align-self: flex-end !important}
+.align-self-center {align-self: center !important}
+.align-self-baseline {align-self: baseline !important}
+.align-self-stretch {align-self: stretch !important}
+.order-first {order: -9999 !important}
+.order-last {order: 9999 !important}
+.order-1 {order: 1 !important}
+.order-2 {order: 2 !important}
+.order-3 {order: 3 !important}
+.order-4 {order: 4 !important}
+.order-5 {order: 5 !important}
+.order-6 {order: 6 !important}
+.order-7 {order: 7 !important}
+.order-8 {order: 8 !important}
+.order-9 {order: 9 !important}
+.order-10 {order: 10 !important}
+.order-11 {order: 11 !important}
+.order-12 {order: 12 !important}
+.opacity-0, .focus\.opacity-0:focus, .group:hover .group-hover\.opacity-0, .hover\.opacity-0:hover {opacity: 0 !important}
+.opacity-5, .focus\.opacity-8:focus, .group:hover .group-hover\.opacity-5, .hover\.opacity-5:hover {opacity: 0.05 !important}
+.opacity-10, .focus\.opacity-10:focus, .group:hover .group-hover\.opacity-10, .hover\.opacity-10:hover {opacity: 0.1 !important}
+.opacity-20, .focus\.opacity-20:focus, .group:hover .group-hover\.opacity-20, .hover\.opacity-20:hover {opacity: 0.2 !important}
+.opacity-30, .focus\.opacity-30:focus, .group:hover .group-hover\.opacity-30, .hover\.opacity-30:hover {opacity: 0.3 !important}
+.opacity-40, .focus\.opacity-40:focus, .group:hover .group-hover\.opacity-40, .hover\.opacity-40:hover {opacity: 0.4 !important}
+.opacity-50, .focus\.opacity-50:focus, .group:hover .group-hover\.opacity-50, .hover\.opacity-50:hover {opacity: 0.5 !important}
+.opacity-60, .focus\.opacity-60:focus, .group:hover .group-hover\.opacity-60, .hover\.opacity-60:hover {opacity: 0.6 !important}
+.opacity-70, .focus\.opacity-70:focus, .group:hover .group-hover\.opacity-70, .hover\.opacity-70:hover {opacity: 0.7 !important}
+.opacity-80, .focus\.opacity-80:focus, .group:hover .group-hover\.opacity-80, .hover\.opacity-80:hover {opacity: 0.8 !important}
+.opacity-90, .focus\.opacity-90:focus, .group:hover .group-hover\.opacity-90, .hover\.opacity-90:hover {opacity: 0.9 !important}
+.opacity-100, .focus\.opacity-100:focus, .group:hover .group-hover\.opacity-100, .hover\.opacity-100:hover {opacity: 1 !important}
+
+/* SM */
+@media (min-width: 576px) {
+	.sm\:static {position: static !important}
+	.sm\:relative {position: relative !important}
+	.sm\:absolute {position: absolute !important}
+	.sm\:fixed {position: fixed !important}
+	.sm\:sticky {position: sticky !important}
+	.sm\:inline {display: inline !important}
+	.sm\:block {display: block !important}
+	.sm\:flex {display: flex !important}
+	.sm\:grid {display: grid !important}
+	.sm\:inline-block {display: inline-block !important}
+	.sm\:inline-flex {display: inline-flex !important}
+	.sm\:inline-grid {display: inline-grid !important}
+	.sm\:inline-table {display: inline-table !important}
+	.sm\:table {display: table !important}
+	.sm\:table-caption {display: table-caption !important}
+	.sm\:table-column-group {display: table-column-group !important}
+	.sm\:table-header-group {display: table-header-group !important}
+	.sm\:table-footer-group {display: table-footer-group !important}
+	.sm\:table-row-group {display: table-row-group !important}
+	.sm\:table-cell {display: table-cell !important}
+	.sm\:table-column {display: table-column !important}
+	.sm\:table-row {display: table-row !important}
+	.sm\:hidden {display: none !important}
+	.sm\:flow-root {display: flow-root !important}
+	.sm\:visible {visibility: visible !important}
+	.sm\:invisible {visibility: hidden !important}
+	.sm\:border-box {box-sizing: border-box !important}
+	.sm\:content-box {box-sizing: content-box !important}
+	.sm\:clear-left {clear: left !important}
+	.sm\:clear-right {clear: right !important}
+	.sm\:clear-both {clear: both !important}
+	.sm\:float-left {float: left !important}
+	.sm\:float-right {float: right !important}
+	.sm\:float-none {float: none !important}
+	.sm\:rounded-0 {border-radius: 0 !important}
+	.sm\:rounded {border-radius: var(--border-radius) !important}
+	.sm\:rounded-sm {border-radius: var(--border-radius-sm) !important}
+	.sm\:rounded-md {border-radius: var(--border-radius-md) !important}
+	.sm\:rounded-lg {border-radius: var(--border-radius-lg) !important}
+	.sm\:rounded-xl {border-radius: var(--border-radius-xl) !important}
+	.sm\:rounded-circle {border-radius: 50% !important}
+	.sm\:rounded-pill {border-radius: var(--border-radius-pill) !important}
+	.sm\:rounded-top {
+		border-top-left-radius: var(--border-radius) !important;
+		border-top-right-radius: var(--border-radius) !important;
+	}
+	.sm\:rounded-end {
+		border-top-right-radius: var(--border-radius) !important;
+		border-bottom-right-radius: var(--border-radius) !important;
+	}
+	.sm\:rounded-bottom {
+		border-bottom-right-radius: var(--border-radius) !important;
+		border-bottom-left-radius: var(--border-radius) !important;
+	}
+	.sm\:rounded-start {
+		border-bottom-left-radius: var(--border-radius) !important;
+		border-top-left-radius: var(--border-radius) !important;
+	}
+	.sm\:z-auto, .focus\.z-auto:focus {z-index: auto !important}
+	.sm\:z-0, .focus\.z-0:focus {z-index: 0 !important}
+	.sm\:z-1, .focus\.z-1:focus {z-index: 1 !important}
+	.sm\:z-2, .focus\.z-2:focus {z-index: 2 !important}
+	.sm\:z-3, .focus\.z-3:focus {z-index: 3 !important}
+	.sm\:z-4, .focus\.z-4:focus {z-index: 4 !important}
+	.sm\:z-5, .focus\.z-5:focus {z-index: 5 !important}
+	.sm\:z-6, .focus\.z-6:focus {z-index: 6 !important}
+	.sm\:z-7, .focus\.z-7:focus {z-index: 7 !important}
+	.sm\:z-8, .focus\.z-8:focus {z-index: 8 !important}
+	.sm\:z-9, .focus\.z-9:focus {z-index: 9 !important}
+	.sm\:z-10, .focus\.z-10:focus {z-index: 10 !important}
+	.sm\:xy-0 {
+		top: 0 !important;
+		right: 0 !important;
+		bottom: 0 !important;
+		left: 0 !important;
+	}
+	.sm\:xy-auto {
+		top: auto !important;
+		right: auto !important;
+		bottom: auto !important;
+		left: auto !important;
+	}
+	.sm\:x-0 {
+		left: 0 !important;
+		right: 0 !important;
+	}
+	.sm\:x-auto {
+		left: auto !important;
+		right: auto !important;
+	}
+	.sm\:y-0 {
+		top: 0 !important;
+		bottom: 0 !important;
+	}
+	.sm\:y-auto {
+		top: auto !important;
+		bottom: auto !important;
+	}
+	.sm\:gap-1 {gap: 0.1rem !important}
+	.sm\:gap-2 {gap: 0.2rem !important}
+	.sm\:gap-4 {gap: 0.4rem !important}
+	.sm\:gap-6 {gap: 0.6rem !important}
+	.sm\:gap-8 {gap: 0.8rem !important}
+	.sm\:gap-10 {gap: 1rem !important}
+	.sm\:gap-12 {gap: 1.2rem !important}
+	.sm\:gap-14 {gap: 1.4rem !important}
+	.sm\:gap-16 {gap: 1.6rem !important}
+	.sm\:gap-18 {gap: 1.8rem !important}
+	.sm\:gap-20 {gap: 2rem !important}
+	.sm\:gap-24 {gap: 2.4rem !important}
+	.sm\:gap-28 {gap: 2.8rem !important}
+	.sm\:gap-32 {gap: 3.2rem !important}
+	.sm\:flex-fill {flex: 1 1 auto !important}
+	.sm\:flex-row {flex-direction: row !important}
+	.sm\:flex-column {flex-direction: column !important}
+	.sm\:flex-row-reverse {flex-direction: row-reverse !important}
+	.sm\:flex-column-reverse {flex-direction: column-reverse !important}
+	.sm\:flex-grow-0 {flex-grow: 0 !important}
+	.sm\:flex-grow-1 {flex-grow: 1 !important}
+	.sm\:flex-shrink-0 {flex-shrink: 0 !important}
+	.sm\:flex-shrink-1 {flex-shrink: 1 !important}
+	.sm\:flex-wrap {flex-wrap: wrap !important}
+	.sm\:flex-nowrap {flex-wrap: nowrap !important}
+	.sm\:flex-wrap-reverse {flex-wrap: wrap-reverse !important}
+	.sm\:justify-normal {justify-content: normal !important}
+	.sm\:justify-start {justify-content: flex-start !important}
+	.sm\:justify-end {justify-content: flex-end !important}
+	.sm\:justify-center {justify-content: center !important}
+	.sm\:justify-between {justify-content: space-between !important}
+	.sm\:justify-around {justify-content: space-around !important}
+	.sm\:justify-evenly {justify-content: space-evenly !important}
+	.sm\:justify-stretch {justify-content: stretch !important}
+	.sm\:align-items-start {align-items: flex-start !important}
+	.sm\:align-items-end {align-items: flex-end !important}
+	.sm\:align-items-center {align-items: center !important}
+	.sm\:align-items-baseline {align-items: baseline !important}
+	.sm\:align-items-stretch {align-items: stretch !important}
+	.sm\:align-start {align-content: flex-start !important}
+	.sm\:align-end {align-content: flex-end !important}
+	.sm\:align-center {align-content: center !important}
+	.sm\:align-between {align-content: space-between !important}
+	.sm\:align-around {align-content: space-around !important}
+	.sm\:align-stretch {align-content: stretch !important}
+	.sm\:align-self-auto {align-self: auto !important}
+	.sm\:align-self-start {align-self: flex-start !important}
+	.sm\:align-self-end {align-self: flex-end !important}
+	.sm\:align-self-center {align-self: center !important}
+	.sm\:align-self-baseline {align-self: baseline !important}
+	.sm\:align-self-stretch {align-self: stretch !important}
+	.sm\:order-first {order: -9999 !important}
+	.sm\:order-last {order: 9999 !important}
+	.sm\:order-1 {order: 1 !important}
+	.sm\:order-2 {order: 2 !important}
+	.sm\:order-3 {order: 3 !important}
+	.sm\:order-4 {order: 4 !important}
+	.sm\:order-5 {order: 5 !important}
+	.sm\:order-6 {order: 6 !important}
+	.sm\:order-7 {order: 7 !important}
+	.sm\:order-8 {order: 8 !important}
+	.sm\:order-9 {order: 9 !important}
+	.sm\:order-10 {order: 10 !important}
+	.sm\:order-11 {order: 11 !important}
+	.sm\:order-12 {order: 12 !important}
+	.sm\:opacity-0 {opacity: 0 !important}
+	.sm\:opacity-5 {opacity: 0.05 !important}
+	.sm\:opacity-10 {opacity: 0.1 !important}
+	.sm\:opacity-20 {opacity: 0.2 !important}
+	.sm\:opacity-30 {opacity: 0.3 !important}
+	.sm\:opacity-40 {opacity: 0.4 !important}
+	.sm\:opacity-50 {opacity: 0.5 !important}
+	.sm\:opacity-60 {opacity: 0.6 !important}
+	.sm\:opacity-70 {opacity: 0.7 !important}
+	.sm\:opacity-80 {opacity: 0.8 !important}
+	.sm\:opacity-90 {opacity: 0.9 !important}
+	.sm\:opacity-100 {opacity: 1 !important}
+}
+/* MD */
+@media (min-width: 768px) {
+	.md\:static {position: static !important}
+	.md\:relative {position: relative !important}
+	.md\:absolute {position: absolute !important}
+	.md\:fixed {position: fixed !important}
+	.md\:sticky {position: sticky !important}
+	.md\:inline {display: inline !important}
+	.md\:block {display: block !important}
+	.md\:flex {display: flex !important}
+	.md\:grid {display: grid !important}
+	.md\:inline-block {display: inline-block !important}
+	.md\:inline-flex {display: inline-flex !important}
+	.md\:inline-grid {display: inline-grid !important}
+	.md\:inline-table {display: inline-table !important}
+	.md\:table {display: table !important}
+	.md\:table-caption {display: table-caption !important}
+	.md\:table-column-group {display: table-column-group !important}
+	.md\:table-header-group {display: table-header-group !important}
+	.md\:table-footer-group {display: table-footer-group !important}
+	.md\:table-row-group {display: table-row-group !important}
+	.md\:table-cell {display: table-cell !important}
+	.md\:table-column {display: table-column !important}
+	.md\:table-row {display: table-row !important}
+	.md\:hidden {display: none !important}
+	.md\:flow-root {display: flow-root !important}
+	.md\:visible {visibility: visible !important}
+	.md\:invisible {visibility: hidden !important}
+	.md\:border-box {box-sizing: border-box !important}
+	.md\:content-box {box-sizing: content-box !important}
+	.md\:clear-left {clear: left !important}
+	.md\:clear-right {clear: right !important}
+	.md\:clear-both {clear: both !important}
+	.md\:float-left {float: left !important}
+	.md\:float-right {float: right !important}
+	.md\:float-none {float: none !important}
+	.md\:rounded-0 {border-radius: 0 !important}
+	.md\:rounded {border-radius: var(--border-radius) !important}
+	.md\:rounded-sm {border-radius: var(--border-radius-sm) !important}
+	.md\:rounded-md {border-radius: var(--border-radius-md) !important}
+	.md\:rounded-lg {border-radius: var(--border-radius-lg) !important}
+	.md\:rounded-xl {border-radius: var(--border-radius-xl) !important}
+	.md\:rounded-circle {border-radius: 50% !important}
+	.md\:rounded-pill {border-radius: var(--border-radius-pill) !important}
+	.md\:rounded-top {
+		border-top-left-radius: var(--border-radius) !important;
+		border-top-right-radius: var(--border-radius) !important;
+	}
+	.md\:rounded-end {
+		border-top-right-radius: var(--border-radius) !important;
+		border-bottom-right-radius: var(--border-radius) !important;
+	}
+	.md\:rounded-bottom {
+		border-bottom-right-radius: var(--border-radius) !important;
+		border-bottom-left-radius: var(--border-radius) !important;
+	}
+	.md\:rounded-start {
+		border-bottom-left-radius: var(--border-radius) !important;
+		border-top-left-radius: var(--border-radius) !important;
+	}
+	.md\:z-auto, .focus\.z-auto:focus {z-index: auto !important}
+	.md\:z-0, .focus\.z-0:focus {z-index: 0 !important}
+	.md\:z-1, .focus\.z-1:focus {z-index: 1 !important}
+	.md\:z-2, .focus\.z-2:focus {z-index: 2 !important}
+	.md\:z-3, .focus\.z-3:focus {z-index: 3 !important}
+	.md\:z-4, .focus\.z-4:focus {z-index: 4 !important}
+	.md\:z-5, .focus\.z-5:focus {z-index: 5 !important}
+	.md\:z-6, .focus\.z-6:focus {z-index: 6 !important}
+	.md\:z-7, .focus\.z-7:focus {z-index: 7 !important}
+	.md\:z-8, .focus\.z-8:focus {z-index: 8 !important}
+	.md\:z-9, .focus\.z-9:focus {z-index: 9 !important}
+	.md\:z-10, .focus\.z-10:focus {z-index: 10 !important}
+	.md\:xy-0 {
+		top: 0 !important;
+		right: 0 !important;
+		bottom: 0 !important;
+		left: 0 !important;
+	}
+	.md\:xy-auto {
+		top: auto !important;
+		right: auto !important;
+		bottom: auto !important;
+		left: auto !important;
+	}
+	.md\:x-0 {
+		left: 0 !important;
+		right: 0 !important;
+	}
+	.md\:x-auto {
+		left: auto !important;
+		right: auto !important;
+	}
+	.md\:y-0 {
+		top: 0 !important;
+		bottom: 0 !important;
+	}
+	.md\:y-auto {
+		top: auto !important;
+		bottom: auto !important;
+	}
+	.md\:gap-1 {gap: 0.1rem !important}
+	.md\:gap-2 {gap: 0.2rem !important}
+	.md\:gap-4 {gap: 0.4rem !important}
+	.md\:gap-6 {gap: 0.6rem !important}
+	.md\:gap-8 {gap: 0.8rem !important}
+	.md\:gap-10 {gap: 1rem !important}
+	.md\:gap-12 {gap: 1.2rem !important}
+	.md\:gap-14 {gap: 1.4rem !important}
+	.md\:gap-16 {gap: 1.6rem !important}
+	.md\:gap-18 {gap: 1.8rem !important}
+	.md\:gap-20 {gap: 2rem !important}
+	.md\:gap-24 {gap: 2.4rem !important}
+	.md\:gap-28 {gap: 2.8rem !important}
+	.md\:gap-32 {gap: 3.2rem !important}
+	.md\:flex-fill {flex: 1 1 auto !important}
+	.md\:flex-row {flex-direction: row !important}
+	.md\:flex-column {flex-direction: column !important}
+	.md\:flex-row-reverse {flex-direction: row-reverse !important}
+	.md\:flex-column-reverse {flex-direction: column-reverse !important}
+	.md\:flex-grow-0 {flex-grow: 0 !important}
+	.md\:flex-grow-1 {flex-grow: 1 !important}
+	.md\:flex-shrink-0 {flex-shrink: 0 !important}
+	.md\:flex-shrink-1 {flex-shrink: 1 !important}
+	.md\:flex-wrap {flex-wrap: wrap !important}
+	.md\:flex-nowrap {flex-wrap: nowrap !important}
+	.md\:flex-wrap-reverse {flex-wrap: wrap-reverse !important}
+	.md\:justify-normal {justify-content: normal !important}
+	.md\:justify-start {justify-content: flex-start !important}
+	.md\:justify-end {justify-content: flex-end !important}
+	.md\:justify-center {justify-content: center !important}
+	.md\:justify-between {justify-content: space-between !important}
+	.md\:justify-around {justify-content: space-around !important}
+	.md\:justify-evenly {justify-content: space-evenly !important}
+	.md\:justify-stretch {justify-content: stretch !important}
+	.md\:align-items-start {align-items: flex-start !important}
+	.md\:align-items-end {align-items: flex-end !important}
+	.md\:align-items-center {align-items: center !important}
+	.md\:align-items-baseline {align-items: baseline !important}
+	.md\:align-items-stretch {align-items: stretch !important}
+	.md\:align-start {align-content: flex-start !important}
+	.md\:align-end {align-content: flex-end !important}
+	.md\:align-center {align-content: center !important}
+	.md\:align-between {align-content: space-between !important}
+	.md\:align-around {align-content: space-around !important}
+	.md\:align-stretch {align-content: stretch !important}
+	.md\:align-self-auto {align-self: auto !important}
+	.md\:align-self-start {align-self: flex-start !important}
+	.md\:align-self-end {align-self: flex-end !important}
+	.md\:align-self-center {align-self: center !important}
+	.md\:align-self-baseline {align-self: baseline !important}
+	.md\:align-self-stretch {align-self: stretch !important}
+	.md\:order-first {order: -9999 !important}
+	.md\:order-last {order: 9999 !important}
+	.md\:order-1 {order: 1 !important}
+	.md\:order-2 {order: 2 !important}
+	.md\:order-3 {order: 3 !important}
+	.md\:order-4 {order: 4 !important}
+	.md\:order-5 {order: 5 !important}
+	.md\:order-6 {order: 6 !important}
+	.md\:order-7 {order: 7 !important}
+	.md\:order-8 {order: 8 !important}
+	.md\:order-9 {order: 9 !important}
+	.md\:order-10 {order: 10 !important}
+	.md\:order-11 {order: 11 !important}
+	.md\:order-12 {order: 12 !important}
+	.md\:opacity-0 {opacity: 0 !important}
+	.md\:opacity-5 {opacity: 0.05 !important}
+	.md\:opacity-10 {opacity: 0.1 !important}
+	.md\:opacity-20 {opacity: 0.2 !important}
+	.md\:opacity-30 {opacity: 0.3 !important}
+	.md\:opacity-40 {opacity: 0.4 !important}
+	.md\:opacity-50 {opacity: 0.5 !important}
+	.md\:opacity-60 {opacity: 0.6 !important}
+	.md\:opacity-70 {opacity: 0.7 !important}
+	.md\:opacity-80 {opacity: 0.8 !important}
+	.md\:opacity-90 {opacity: 0.9 !important}
+	.md\:opacity-100 {opacity: 1 !important}
+}
+
+/* LG */
+@media (min-width: 992px) {
+	.lg\:static {position: static !important}
+	.lg\:relative {position: relative !important}
+	.lg\:absolute {position: absolute !important}
+	.lg\:fixed {position: fixed !important}
+	.lg\:sticky {position: sticky !important}
+	.lg\:inline {display: inline !important}
+	.lg\:block {display: block !important}
+	.lg\:flex {display: flex !important}
+	.lg\:grid {display: grid !important}
+	.lg\:inline-block {display: inline-block !important}
+	.lg\:inline-flex {display: inline-flex !important}
+	.lg\:inline-grid {display: inline-grid !important}
+	.lg\:inline-table {display: inline-table !important}
+	.lg\:table {display: table !important}
+	.lg\:table-caption {display: table-caption !important}
+	.lg\:table-column-group {display: table-column-group !important}
+	.lg\:table-header-group {display: table-header-group !important}
+	.lg\:table-footer-group {display: table-footer-group !important}
+	.lg\:table-row-group {display: table-row-group !important}
+	.lg\:table-cell {display: table-cell !important}
+	.lg\:table-column {display: table-column !important}
+	.lg\:table-row {display: table-row !important}
+	.lg\:hidden {display: none !important}
+	.lg\:flow-root {display: flow-root !important}
+	.lg\:visible {visibility: visible !important}
+	.lg\:invisible {visibility: hidden !important}
+	.lg\:border-box {box-sizing: border-box !important}
+	.lg\:content-box {box-sizing: content-box !important}
+	.lg\:clear-left {clear: left !important}
+	.lg\:clear-right {clear: right !important}
+	.lg\:clear-both {clear: both !important}
+	.lg\:float-left {float: left !important}
+	.lg\:float-right {float: right !important}
+	.lg\:float-none {float: none !important}
+	.lg\:rounded-0 {border-radius: 0 !important}
+	.lg\:rounded {border-radius: var(--border-radius) !important}
+	.lg\:rounded-sm {border-radius: var(--border-radius-sm) !important}
+	.lg\:rounded-md {border-radius: var(--border-radius-md) !important}
+	.lg\:rounded-lg {border-radius: var(--border-radius-lg) !important}
+	.lg\:rounded-xl {border-radius: var(--border-radius-xl) !important}
+	.lg\:rounded-circle {border-radius: 50% !important}
+	.lg\:rounded-pill {border-radius: var(--border-radius-pill) !important}
+	.lg\:rounded-top {
+		border-top-left-radius: var(--border-radius) !important;
+		border-top-right-radius: var(--border-radius) !important;
+	}
+	.lg\:rounded-end {
+		border-top-right-radius: var(--border-radius) !important;
+		border-bottom-right-radius: var(--border-radius) !important;
+	}
+	.lg\:rounded-bottom {
+		border-bottom-right-radius: var(--border-radius) !important;
+		border-bottom-left-radius: var(--border-radius) !important;
+	}
+	.lg\:rounded-start {
+		border-bottom-left-radius: var(--border-radius) !important;
+		border-top-left-radius: var(--border-radius) !important;
+	}
+	.lg\:z-auto, .focus\.z-auto:focus {z-index: auto !important}
+	.lg\:z-0, .focus\.z-0:focus {z-index: 0 !important}
+	.lg\:z-1, .focus\.z-1:focus {z-index: 1 !important}
+	.lg\:z-2, .focus\.z-2:focus {z-index: 2 !important}
+	.lg\:z-3, .focus\.z-3:focus {z-index: 3 !important}
+	.lg\:z-4, .focus\.z-4:focus {z-index: 4 !important}
+	.lg\:z-5, .focus\.z-5:focus {z-index: 5 !important}
+	.lg\:z-6, .focus\.z-6:focus {z-index: 6 !important}
+	.lg\:z-7, .focus\.z-7:focus {z-index: 7 !important}
+	.lg\:z-8, .focus\.z-8:focus {z-index: 8 !important}
+	.lg\:z-9, .focus\.z-9:focus {z-index: 9 !important}
+	.lg\:z-10, .focus\.z-10:focus {z-index: 10 !important}
+	.lg\:xy-0 {
+		top: 0 !important;
+		right: 0 !important;
+		bottom: 0 !important;
+		left: 0 !important;
+	}
+	.lg\:xy-auto {
+		top: auto !important;
+		right: auto !important;
+		bottom: auto !important;
+		left: auto !important;
+	}
+	.lg\:x-0 {
+		left: 0 !important;
+		right: 0 !important;
+	}
+	.lg\:x-auto {
+		left: auto !important;
+		right: auto !important;
+	}
+	.lg\:y-0 {
+		top: 0 !important;
+		bottom: 0 !important;
+	}
+	.lg\:y-auto {
+		top: auto !important;
+		bottom: auto !important;
+	}
+	.lg\:gap-1 {gap: 0.1rem !important}
+	.lg\:gap-2 {gap: 0.2rem !important}
+	.lg\:gap-4 {gap: 0.4rem !important}
+	.lg\:gap-6 {gap: 0.6rem !important}
+	.lg\:gap-8 {gap: 0.8rem !important}
+	.lg\:gap-10 {gap: 1rem !important}
+	.lg\:gap-12 {gap: 1.2rem !important}
+	.lg\:gap-14 {gap: 1.4rem !important}
+	.lg\:gap-16 {gap: 1.6rem !important}
+	.lg\:gap-18 {gap: 1.8rem !important}
+	.lg\:gap-20 {gap: 2rem !important}
+	.lg\:gap-24 {gap: 2.4rem !important}
+	.lg\:gap-28 {gap: 2.8rem !important}
+	.lg\:gap-32 {gap: 3.2rem !important}
+	.lg\:flex-fill {flex: 1 1 auto !important}
+	.lg\:flex-row {flex-direction: row !important}
+	.lg\:flex-column {flex-direction: column !important}
+	.lg\:flex-row-reverse {flex-direction: row-reverse !important}
+	.lg\:flex-column-reverse {flex-direction: column-reverse !important}
+	.lg\:flex-grow-0 {flex-grow: 0 !important}
+	.lg\:flex-grow-1 {flex-grow: 1 !important}
+	.lg\:flex-shrink-0 {flex-shrink: 0 !important}
+	.lg\:flex-shrink-1 {flex-shrink: 1 !important}
+	.lg\:flex-wrap {flex-wrap: wrap !important}
+	.lg\:flex-nowrap {flex-wrap: nowrap !important}
+	.lg\:flex-wrap-reverse {flex-wrap: wrap-reverse !important}
+	.lg\:justify-normal {justify-content: normal !important}
+	.lg\:justify-start {justify-content: flex-start !important}
+	.lg\:justify-end {justify-content: flex-end !important}
+	.lg\:justify-center {justify-content: center !important}
+	.lg\:justify-between {justify-content: space-between !important}
+	.lg\:justify-around {justify-content: space-around !important}
+	.lg\:justify-evenly {justify-content: space-evenly !important}
+	.lg\:justify-stretch {justify-content: stretch !important}
+	.lg\:align-items-start {align-items: flex-start !important}
+	.lg\:align-items-end {align-items: flex-end !important}
+	.lg\:align-items-center {align-items: center !important}
+	.lg\:align-items-baseline {align-items: baseline !important}
+	.lg\:align-items-stretch {align-items: stretch !important}
+	.lg\:align-start {align-content: flex-start !important}
+	.lg\:align-end {align-content: flex-end !important}
+	.lg\:align-center {align-content: center !important}
+	.lg\:align-between {align-content: space-between !important}
+	.lg\:align-around {align-content: space-around !important}
+	.lg\:align-stretch {align-content: stretch !important}
+	.lg\:align-self-auto {align-self: auto !important}
+	.lg\:align-self-start {align-self: flex-start !important}
+	.lg\:align-self-end {align-self: flex-end !important}
+	.lg\:align-self-center {align-self: center !important}
+	.lg\:align-self-baseline {align-self: baseline !important}
+	.lg\:align-self-stretch {align-self: stretch !important}
+	.lg\:order-first {order: -9999 !important}
+	.lg\:order-last {order: 9999 !important}
+	.lg\:order-1 {order: 1 !important}
+	.lg\:order-2 {order: 2 !important}
+	.lg\:order-3 {order: 3 !important}
+	.lg\:order-4 {order: 4 !important}
+	.lg\:order-5 {order: 5 !important}
+	.lg\:order-6 {order: 6 !important}
+	.lg\:order-7 {order: 7 !important}
+	.lg\:order-8 {order: 8 !important}
+	.lg\:order-9 {order: 9 !important}
+	.lg\:order-10 {order: 10 !important}
+	.lg\:order-11 {order: 11 !important}
+	.lg\:order-12 {order: 12 !important}
+	.lg\:opacity-0 {opacity: 0 !important}
+	.lg\:opacity-5 {opacity: 0.05 !important}
+	.lg\:opacity-10 {opacity: 0.1 !important}
+	.lg\:opacity-20 {opacity: 0.2 !important}
+	.lg\:opacity-30 {opacity: 0.3 !important}
+	.lg\:opacity-40 {opacity: 0.4 !important}
+	.lg\:opacity-50 {opacity: 0.5 !important}
+	.lg\:opacity-60 {opacity: 0.6 !important}
+	.lg\:opacity-70 {opacity: 0.7 !important}
+	.lg\:opacity-80 {opacity: 0.8 !important}
+	.lg\:opacity-90 {opacity: 0.9 !important}
+	.lg\:opacity-100 {opacity: 1 !important}
+}
+
+/* XL */
+@media (min-width: 1280px) {
+	.xl\:static {position: static !important}
+	.xl\:relative {position: relative !important}
+	.xl\:absolute {position: absolute !important}
+	.xl\:fixed {position: fixed !important}
+	.xl\:sticky {position: sticky !important}
+	.xl\:inline {display: inline !important}
+	.xl\:block {display: block !important}
+	.xl\:flex {display: flex !important}
+	.xl\:grid {display: grid !important}
+	.xl\:inline-block {display: inline-block !important}
+	.xl\:inline-flex {display: inline-flex !important}
+	.xl\:inline-grid {display: inline-grid !important}
+	.xl\:inline-table {display: inline-table !important}
+	.xl\:table {display: table !important}
+	.xl\:table-caption {display: table-caption !important}
+	.xl\:table-column-group {display: table-column-group !important}
+	.xl\:table-header-group {display: table-header-group !important}
+	.xl\:table-footer-group {display: table-footer-group !important}
+	.xl\:table-row-group {display: table-row-group !important}
+	.xl\:table-cell {display: table-cell !important}
+	.xl\:table-column {display: table-column !important}
+	.xl\:table-row {display: table-row !important}
+	.xl\:hidden {display: none !important}
+	.xl\:flow-root {display: flow-root !important}
+	.xl\:visible {visibility: visible !important}
+	.xl\:invisible {visibility: hidden !important}
+	.xl\:border-box {box-sizing: border-box !important}
+	.xl\:content-box {box-sizing: content-box !important}
+	.xl\:clear-left {clear: left !important}
+	.xl\:clear-right {clear: right !important}
+	.xl\:clear-both {clear: both !important}
+	.xl\:float-left {float: left !important}
+	.xl\:float-right {float: right !important}
+	.xl\:float-none {float: none !important}
+	.xl\:rounded-0 {border-radius: 0 !important}
+	.xl\:rounded {border-radius: var(--border-radius) !important}
+	.xl\:rounded-sm {border-radius: var(--border-radius-sm) !important}
+	.xl\:rounded-md {border-radius: var(--border-radius-md) !important}
+	.xl\:rounded-lg {border-radius: var(--border-radius-lg) !important}
+	.xl\:rounded-xl {border-radius: var(--border-radius-xl) !important}
+	.xl\:rounded-circle {border-radius: 50% !important}
+	.xl\:rounded-pill {border-radius: var(--border-radius-pill) !important}
+	.xl\:rounded-top {
+		border-top-left-radius: var(--border-radius) !important;
+		border-top-right-radius: var(--border-radius) !important;
+	}
+	.xl\:rounded-end {
+		border-top-right-radius: var(--border-radius) !important;
+		border-bottom-right-radius: var(--border-radius) !important;
+	}
+	.xl\:rounded-bottom {
+		border-bottom-right-radius: var(--border-radius) !important;
+		border-bottom-left-radius: var(--border-radius) !important;
+	}
+	.xl\:rounded-start {
+		border-bottom-left-radius: var(--border-radius) !important;
+		border-top-left-radius: var(--border-radius) !important;
+	}
+	.xl\:z-auto, .focus\.z-auto:focus {z-index: auto !important}
+	.xl\:z-0, .focus\.z-0:focus {z-index: 0 !important}
+	.xl\:z-1, .focus\.z-1:focus {z-index: 1 !important}
+	.xl\:z-2, .focus\.z-2:focus {z-index: 2 !important}
+	.xl\:z-3, .focus\.z-3:focus {z-index: 3 !important}
+	.xl\:z-4, .focus\.z-4:focus {z-index: 4 !important}
+	.xl\:z-5, .focus\.z-5:focus {z-index: 5 !important}
+	.xl\:z-6, .focus\.z-6:focus {z-index: 6 !important}
+	.xl\:z-7, .focus\.z-7:focus {z-index: 7 !important}
+	.xl\:z-8, .focus\.z-8:focus {z-index: 8 !important}
+	.xl\:z-9, .focus\.z-9:focus {z-index: 9 !important}
+	.xl\:z-10, .focus\.z-10:focus {z-index: 10 !important}
+	.xl\:xy-0 {
+		top: 0 !important;
+		right: 0 !important;
+		bottom: 0 !important;
+		left: 0 !important;
+	}
+	.xl\:xy-auto {
+		top: auto !important;
+		right: auto !important;
+		bottom: auto !important;
+		left: auto !important;
+	}
+	.xl\:x-0 {
+		left: 0 !important;
+		right: 0 !important;
+	}
+	.xl\:x-auto {
+		left: auto !important;
+		right: auto !important;
+	}
+	.xl\:y-0 {
+		top: 0 !important;
+		bottom: 0 !important;
+	}
+	.xl\:y-auto {
+		top: auto !important;
+		bottom: auto !important;
+	}
+	.xl\:gap-1 {gap: 0.1rem !important}
+	.xl\:gap-2 {gap: 0.2rem !important}
+	.xl\:gap-4 {gap: 0.4rem !important}
+	.xl\:gap-6 {gap: 0.6rem !important}
+	.xl\:gap-8 {gap: 0.8rem !important}
+	.xl\:gap-10 {gap: 1rem !important}
+	.xl\:gap-12 {gap: 1.2rem !important}
+	.xl\:gap-14 {gap: 1.4rem !important}
+	.xl\:gap-16 {gap: 1.6rem !important}
+	.xl\:gap-18 {gap: 1.8rem !important}
+	.xl\:gap-20 {gap: 2rem !important}
+	.xl\:gap-24 {gap: 2.4rem !important}
+	.xl\:gap-28 {gap: 2.8rem !important}
+	.xl\:gap-32 {gap: 3.2rem !important}
+	.xl\:flex-fill {flex: 1 1 auto !important}
+	.xl\:flex-row {flex-direction: row !important}
+	.xl\:flex-column {flex-direction: column !important}
+	.xl\:flex-row-reverse {flex-direction: row-reverse !important}
+	.xl\:flex-column-reverse {flex-direction: column-reverse !important}
+	.xl\:flex-grow-0 {flex-grow: 0 !important}
+	.xl\:flex-grow-1 {flex-grow: 1 !important}
+	.xl\:flex-shrink-0 {flex-shrink: 0 !important}
+	.xl\:flex-shrink-1 {flex-shrink: 1 !important}
+	.xl\:flex-wrap {flex-wrap: wrap !important}
+	.xl\:flex-nowrap {flex-wrap: nowrap !important}
+	.xl\:flex-wrap-reverse {flex-wrap: wrap-reverse !important}
+	.xl\:justify-normal {justify-content: normal !important}
+	.xl\:justify-start {justify-content: flex-start !important}
+	.xl\:justify-end {justify-content: flex-end !important}
+	.xl\:justify-center {justify-content: center !important}
+	.xl\:justify-between {justify-content: space-between !important}
+	.xl\:justify-around {justify-content: space-around !important}
+	.xl\:justify-evenly {justify-content: space-evenly !important}
+	.xl\:justify-stretch {justify-content: stretch !important}
+	.xl\:align-items-start {align-items: flex-start !important}
+	.xl\:align-items-end {align-items: flex-end !important}
+	.xl\:align-items-center {align-items: center !important}
+	.xl\:align-items-baseline {align-items: baseline !important}
+	.xl\:align-items-stretch {align-items: stretch !important}
+	.xl\:align-start {align-content: flex-start !important}
+	.xl\:align-end {align-content: flex-end !important}
+	.xl\:align-center {align-content: center !important}
+	.xl\:align-between {align-content: space-between !important}
+	.xl\:align-around {align-content: space-around !important}
+	.xl\:align-stretch {align-content: stretch !important}
+	.xl\:align-self-auto {align-self: auto !important}
+	.xl\:align-self-start {align-self: flex-start !important}
+	.xl\:align-self-end {align-self: flex-end !important}
+	.xl\:align-self-center {align-self: center !important}
+	.xl\:align-self-baseline {align-self: baseline !important}
+	.xl\:align-self-stretch {align-self: stretch !important}
+	.xl\:order-first {order: -9999 !important}
+	.xl\:order-last {order: 9999 !important}
+	.xl\:order-1 {order: 1 !important}
+	.xl\:order-2 {order: 2 !important}
+	.xl\:order-3 {order: 3 !important}
+	.xl\:order-4 {order: 4 !important}
+	.xl\:order-5 {order: 5 !important}
+	.xl\:order-6 {order: 6 !important}
+	.xl\:order-7 {order: 7 !important}
+	.xl\:order-8 {order: 8 !important}
+	.xl\:order-9 {order: 9 !important}
+	.xl\:order-10 {order: 10 !important}
+	.xl\:order-11 {order: 11 !important}
+	.xl\:order-12 {order: 12 !important}
+	.xl\:opacity-0 {opacity: 0 !important}
+	.xl\:opacity-5 {opacity: 0.05 !important}
+	.xl\:opacity-10 {opacity: 0.1 !important}
+	.xl\:opacity-20 {opacity: 0.2 !important}
+	.xl\:opacity-30 {opacity: 0.3 !important}
+	.xl\:opacity-40 {opacity: 0.4 !important}
+	.xl\:opacity-50 {opacity: 0.5 !important}
+	.xl\:opacity-60 {opacity: 0.6 !important}
+	.xl\:opacity-70 {opacity: 0.7 !important}
+	.xl\:opacity-80 {opacity: 0.8 !important}
+	.xl\:opacity-90 {opacity: 0.9 !important}
+	.xl\:opacity-100 {opacity: 1 !important}
+}

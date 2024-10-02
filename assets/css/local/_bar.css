@@ -1,0 +1,145 @@
+/*!
+ * progress-bar.css  v1.0-alpha1
+ * Copyright 09/04/2023
+ */
+ 
+ .progress-bar {
+	--bar-height: 4px;
+	--bar-border-radius: 0;
+	--bar-color: #6759e8;
+	--bar-bg: #e6e6e7;
+	--bar-text: #6759e8;
+	--bar-animation: progress-bar-fill 2.5s 1;
+	--bar-animation-timing: 1s linear infinite;
+	--bar-transition: width .6s ease;
+	position: relative;
+	margin-bottom: 20px;
+}
+.progress-bar--lg {--bar-height: 6px !important}
+.progress-bar--2x {--bar-height: 8px !important}
+.progress-bar--3x {--bar-height: 12px !important}
+.progress-bar--4x {--bar-height: 16px !important}
+.progress-bar--5x {--bar-height: 20px !important}
+.progress-bar--6x {--bar-height: 24px !important}
+.progress-bar--7x {--bar-height: 28px !important}
+.progress-bar--8x {--bar-height: 32px !important}
+.dark.progress-bar {
+	--bar-bg: #282828;
+	--bar-text: #fff;
+}
+.glow.progress-bar {--bar-box-shadow: 11px 11px 24px 0 currentColor}
+.glow2.progress-bar {--bar-box-shadow: 5px 0 15px 0 currentColor}
+.progress-bar__title {
+	color: var(--bar-text);
+	font-family: "Rubik", Sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 32px;
+	text-transform: capitalize;
+}
+.progress-bar__outer {
+	height: var(--bar-height);
+	background-color: var(--bar-bg);
+	border-radius: var(--bar-border-radius);
+}
+.progress-bar__indicator {
+	position: relative;
+	height: var(--bar-height);
+	color: var(--bar-color);
+	background: var(--bar-color);
+	border-radius: inherit;
+	box-shadow: var(--bar-box-shadow);
+	-webkit-animation: var(--bar-animation);
+	-ms-animation: var(--bar-animation);
+	animation: var(--bar-animation);
+	background-size: var(--bar-bg-size);
+}
+.progress-bar__indicator::before {
+	content: attr(data-progress);
+	position: absolute;
+	padding: 4px 6px;
+	background: #Fff5fd;
+	border-radius: 4px;
+	font-size: 12px;
+	top: -35px;
+	right: 0;
+	transform: transition(50%);
+}
+.progress-bar__indicator::after {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: var(--bar-color);
+	top: -20px;
+	right: 0;
+	transform: translateX(50%) rotate(45deg);
+	border-radius: 2px;
+}
+.label-middle {
+	--bar-height: 20px;
+	--bar-text: #fff;
+}
+.label-middle .progress-bar__indicator::before,
+.label-middle .progress-bar__title {
+	position: absolute;
+	top: 0;
+	padding: 0 10px;
+	font-size: 13px;
+	line-height: var(--bar-height);
+	color: var(--bar-text);
+	z-index: 999;
+}
+.label-middle .progress-bar__indicator::before {
+	background: transparent;
+	left: auto;
+}
+.no-indicator .progress-bar__indicator::before,
+.no-indicator .progress-bar__indicator::after,
+.contains-title .progress-bar__indicator::after {display: none}
+.rounded-0 {--bar-border-radius: 0 !important}
+.rounded {--bar-border-radius: 5px}
+.rounded-lg {--bar-border-radius: 10px}
+.rounded-pill {--bar-border-radius: 2rem}
+.linear-bar .progress-bar__indicator {
+	--bar-color: #d51243;
+	--bar-color: -webkit-gradient(linear, left top, right top, from(#d51243), color-stop(50%, #ff6048), to(#ffcd00));
+	--bar-color: linear-gradient(90deg, #d51243 0, #ff6048 50%, #ffcd00 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#d51243", endColorstr="#ffcd00", GradientType=1);
+}
+.progress-bar--stale {
+	--bar-color: #2e919c;
+	--bar-bg: rgba(46, 145, 156, 0.3) !important;
+}
+.progress-bar--success {
+	--bar-color: #42cd83;
+	--bar-text: var(--bar-color);
+}
+.progress-bar--info {
+	--bar-color: #0dcaf0;
+	--bar-text: var(--bar-color);
+}
+.progress-bar--warning {
+	--bar-color: #f29111;
+	--bar-text: var(--bar-color);
+}
+.progress-bar--danger {
+	--bar-color: #dc3545;
+	--bar-text: var(--bar-color);
+}
+.progress-bar.animated {--bar-animation: progress-bar-fill 2.5s 1, 1s linear infinite progress-bar-stripes}
+.progress-bar.re-animated {--bar-animation: progress-bar-fill 2.5s 1, 1s linear infinite progress-bar-stripes-reverse}
+.progress-bar.striped .progress-bar__indicator {
+	background-image: linear-gradient(-45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+	--bar-bg-size: calc(var(--bar-height) * 2) calc(var(--bar-height) * 2);
+}
+@keyframes progress-bar-fill {
+	from {width: 0}
+	to {width: 100%}
+}
+@keyframes progress-bar-stripes {
+	0% {background-position-x: calc(var(--bar-height) * -2)}
+}
+@keyframes progress-bar-stripes-reverse {
+	0% {background-position-x: calc(var(--bar-height) * 2)}
+}

@@ -1,0 +1,173 @@
+@charset "UTF-8";
+@import "_grid.css";
+@import "_layout.css";
+@import "_util.css";
+@import "_typo.css";
+@import "_btn.css";
+@import "_effect.css";
+/*!
+ * Local CSS ✨ v1.0.1
+ * Copyright 10/05/2024
+ */
+/**
+ * Styles
+ */
+:root {
+	--font-size: 160%;
+}
+
+/* SM */
+@media (min-width: 576px) {
+
+}
+/* MD */
+@media (min-width: 768px) {
+
+}
+/* LG */
+@media (min-width: 992px) {
+
+}
+/* XL */
+@media (min-width: 1280px) {
+
+}
+/* XXL */
+@media (min-width: 1536px) {
+
+}
+
+
+/* XXL */
+@media (min-width: 1536px) {
+	:root {
+		--font-size: 180%;
+	}
+}
+
+/**
+ * Color schemes
+ */
+[data-theme=light],
+:root:not([data-theme=dark]) {
+
+	--primary: #0d6efd;
+	--secondary: #7c0fd1;
+	--tertiary: #046a38;
+	--success: #198754;
+	--info: #0dcaf0;
+	--warning: #ffc107;
+	--danger: #dc3545;
+	--light: #f8f9fa;
+	--dark: #212529;
+	--blue: #007bff;
+	--indigo: #6610f2;
+	--purple: #7c0fd1;
+	--purple-lt: #f7ebf9;
+	--violet: #ae3ec9;
+	--pink: #e83e8c;
+	--red: #dc3545;
+	--orange: #fd7e14;
+	--yellow: #ffc107;
+	--green: #28a745;
+	--teal: #20c997;
+	--cyan: #17a2b8;
+	--white: #fff;
+	--black: #000;
+	--gray: #6c757d;
+
+	--primary-rgb: 13, 110, 253;
+	--secondary-rgb: 108, 117, 125;
+	--success-rgb: 25, 135, 84;
+	--info-rgb: 13, 202, 240;
+	--warning-rgb: 255, 193, 7;
+	--danger-rgb: 220, 53, 69;
+	--light-rgb: 248, 249, 250;
+	--dark-rgb: 33, 37, 41;
+	--white-rgb: 255, 255, 255;
+	--black-rgb: 0, 0, 0;
+	
+	--bg-body-rgb: 255, 255, 255;
+	--bg-body: #FFF;
+	--bg-primary: #FFF;
+	--bg-secondary: #343434;
+	--bg-tertiary: #343434;
+	--bg-dark: #343a40;
+	--bg-light: #f8f9fa;
+	--bg-white: #fff;
+	--bg-success: #DCEDC8;
+	--bg-danger: #dc3545;
+	--bg-warning: #ffc107;
+	--bg-info: #17a2b8;
+	--bg-highlight: #fff3cd;
+}
+
+[data-theme=dark],
+.dark {
+	---bg-body: #0f0f0f;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+	:root:not([data-theme]) {
+		---bg-body: #0f0f0f;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	:root {
+		scroll-behavior: smooth;
+	}
+}
+
+
+/**
+ * Document
+ * Content-box & Responsive typography
+ */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	background-repeat: no-repeat;
+}
+
+::before,
+::after {
+	text-decoration: inherit;
+	vertical-align: inherit;
+}
+
+html {
+	/* 1rem = 10px */
+	font-size: 62.5%;
+	text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+/* Remove the margin in all browsers. */
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--bg-body);
+	line-height: 1.5; /* a nice line-height */
+	font-size: 16px; /* px fallback */
+	font-size: 1.6rem; /* default font-size for document */
+	font-size: var(--font-size);
+	color: var(--font-color);
+	font-family: "Segoe UI", "Helvetica Neue", sans-serif; /* fallback */
+	font-family: var(--font-family-sans);
+}
+
+
+
+
+
+
+
+
+
+
+
