@@ -1,6 +1,6 @@
-/*! Text for LocalCSS ✨ v1.0.1 | MIT License
+/*! Text for Local CSS ✨ v1.0.2 | MIT License
  * Copyright 2023-2024 REDX.Media.
- * Date 11/05/2024
+ * Date 02/10/2024
  */
 :root {
 	--FONT-FAMILIES-----------------: #01;
@@ -91,15 +91,15 @@
 .font-mono {font-family: var(--font-mono)}
 .italic, .fst-italic {font-style: italic !important}
 .normal, .fst-normal {font-style: normal !important}
-.ultralight, .fw-ultralight .hover\.ultralight:hover {font-weight: var(--ultralight) !important}
-.extralight, .fw-extralight, .hover\.extralight:hover {font-weight: var(--extralight) !important}
-.light, .fw-light, .hover\.light:hover {font-weight: var(--light) !important}
-.regular, .fw-normal, .hover\.regular:hover {font-weight: var(--regular) !important}
-.medium, .fw-medium .hover\.medium:hover {font-weight: var(--medium) !important}
-.semibold, .fw-semibold, .hover\.semibold:hover {font-weight: var(--semibold) !important}
-.bold, .fw-bold, .hover\.bold:hover {font-weight: var(--bold) !important}
-.extrabold, .fw-extrabold, .hover\.extrabold:hover {font-weight: var(--extrabold) !important}
-.ultrabold, .fw-ultrabold, .hover\.ultrabold:hover {font-weight: var(--ultrabold) !important}
+.fw-100, .ultralight, .fw-ultralight .hover\.ultralight:hover {font-weight: var(--ultralight) !important}
+.fw-200, .extralight, .fw-extralight, .hover\.extralight:hover {font-weight: var(--extralight) !important}
+.fw-300, .light, .fw-light, .hover\.light:hover {font-weight: var(--light) !important}
+.fw-400, .regular, .fw-normal, .hover\.regular:hover {font-weight: var(--regular) !important}
+.fw-500, .medium, .fw-medium .hover\.medium:hover {font-weight: var(--medium) !important}
+.fw-600, .semibold, .fw-semibold, .hover\.semibold:hover {font-weight: var(--semibold) !important}
+.fw-700, .bold, .fw-bold, .hover\.bold:hover {font-weight: var(--bold) !important}
+.fw-800, .extrabold, .fw-extrabold, .hover\.extrabold:hover {font-weight: var(--extrabold) !important}
+.fw-900, .ultrabold, .fw-ultrabold, .hover\.ultrabold:hover {font-weight: var(--ultrabold) !important}
 .text-n-line, .text-2line {
 	--n-line: 2;
 	overflow: hidden;
