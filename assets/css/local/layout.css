@@ -1,6 +1,6 @@
-/*! LocalCSS ✨ v1.0.2 | MIT License
+/*! LocalCSS ✨ v1.0.3 | MIT License
  * Copyright 2023-2024 REDX.Media.
- * Date 22/07/2024
+ * Date 23/10/2024
  */
 .h-auto {height: auto !important;}
 .h-0 {height: 0 !important;}
@@ -457,6 +457,24 @@
 .right-100p {right: 100% !important;}
 .right-n50p {right: -50% !important;}
 .right-50p {right: 50% !important;}
+.translate-x-0 {transform: translateX(0) !important}
+.translate-x-25p {transform: translateX(25%) !important}
+.translate-x-50p {transform: translateX(50%) !important}
+.translate-x-75p {transform: translateX(75%) !important}
+.translate-x-100p {transform: translateX(100%) !important}
+.translate-x-n25p {transform: translateX(-25%) !important}
+.translate-x-n50p {transform: translateX(-50%) !important}
+.translate-x-n75p {transform: translateX(-75%) !important}
+.translate-x-n100p {transform: translateX(-100%) !important}
+.translate-y-0 {transform: translateY(0) !important}
+.translate-y-25p {transform: translateY(25%) !important}
+.translate-y-50p {transform: translateY(50%) !important}
+.translate-y-75p {transform: translateY(75%) !important}
+.translate-y-100p {transform: translateY(100%) !important}
+.translate-y-n25p {transform: translateY(-25%) !important}
+.translate-y-n50p {transform: translateY(-50%) !important}
+.translate-y-n75p {transform: translateY(-75%) !important}
+.translate-y-n100p {transform: translateY(-100%) !important}
 .m-auto {margin: auto !important;}
 .m-0 {margin: 0 !important;}
 .mx-auto {
@@ -1853,7 +1871,24 @@
 	.sm\:right-100p {right: 100% !important;}
 	.sm\:right-n50p {right: -50% !important;}
 	.sm\:right-50p {right: 50% !important;}
-
+	.sm\:translate-x-0 {transform: translateX(0) !important}
+	.sm\:translate-x-25p {transform: translateX(25%) !important}
+	.sm\:translate-x-50p {transform: translateX(50%) !important}
+	.sm\:translate-x-75p {transform: translateX(75%) !important}
+	.sm\:translate-x-100p {transform: translateX(100%) !important}
+	.sm\:translate-x-n25p {transform: translateX(-25%) !important}
+	.sm\:translate-x-n50p {transform: translateX(-50%) !important}
+	.sm\:translate-x-n75p {transform: translateX(-75%) !important}
+	.sm\:translate-x-n100p {transform: translateX(-100%) !important}
+	.sm\:translate-y-0 {transform: translateY(0) !important}
+	.sm\:translate-y-25p {transform: translateY(25%) !important}
+	.sm\:translate-y-50p {transform: translateY(50%) !important}
+	.sm\:translate-y-75p {transform: translateY(75%) !important}
+	.sm\:translate-y-100p {transform: translateY(100%) !important}
+	.sm\:translate-y-n25p {transform: translateY(-25%) !important}
+	.sm\:translate-y-n50p {transform: translateY(-50%) !important}
+	.sm\:translate-y-n75p {transform: translateY(-75%) !important}
+	.sm\:translate-y-n100p {transform: translateY(-100%) !important}
 	.sm\:m-auto {margin: auto !important;}
 	.sm\:m-0 {margin: 0 !important;}
 	.sm\:m-1 {margin: 0.1rem !important;}
@@ -3313,6 +3348,24 @@
 	.md\:right-100p {right: 100% !important;}
 	.md\:right-n50p {right: -50% !important;}
 	.md\:right-50p {right: 50% !important;}
+	.md\:translate-x-0 {transform: translateX(0) !important}
+	.md\:translate-x-25p {transform: translateX(25%) !important}
+	.md\:translate-x-50p {transform: translateX(50%) !important}
+	.md\:translate-x-75p {transform: translateX(75%) !important}
+	.md\:translate-x-100p {transform: translateX(100%) !important}
+	.md\:translate-x-n25p {transform: translateX(-25%) !important}
+	.md\:translate-x-n50p {transform: translateX(-50%) !important}
+	.md\:translate-x-n75p {transform: translateX(-75%) !important}
+	.md\:translate-x-n100p {transform: translateX(-100%) !important}
+	.md\:translate-y-0 {transform: translateY(0) !important}
+	.md\:translate-y-25p {transform: translateY(25%) !important}
+	.md\:translate-y-50p {transform: translateY(50%) !important}
+	.md\:translate-y-75p {transform: translateY(75%) !important}
+	.md\:translate-y-100p {transform: translateY(100%) !important}
+	.md\:translate-y-n25p {transform: translateY(-25%) !important}
+	.md\:translate-y-n50p {transform: translateY(-50%) !important}
+	.md\:translate-y-n75p {transform: translateY(-75%) !important}
+	.md\:translate-y-n100p {transform: translateY(-100%) !important}
 	.md\:m-auto {margin: auto !important;}
 	.md\:m-0 {margin: 0 !important;}
 	.md\:m-1 {margin: 0.1rem !important;}
@@ -4772,6 +4825,24 @@
 	.lg\:right-100p {right: 100% !important;}
 	.lg\:right-n50p {right: -50% !important;}
 	.lg\:right-50p {right: 50% !important;}
+	.lg\:translate-x-0 {transform: translateX(0) !important}
+	.lg\:translate-x-25p {transform: translateX(25%) !important}
+	.lg\:translate-x-50p {transform: translateX(50%) !important}
+	.lg\:translate-x-75p {transform: translateX(75%) !important}
+	.lg\:translate-x-100p {transform: translateX(100%) !important}
+	.lg\:translate-x-n25p {transform: translateX(-25%) !important}
+	.lg\:translate-x-n50p {transform: translateX(-50%) !important}
+	.lg\:translate-x-n75p {transform: translateX(-75%) !important}
+	.lg\:translate-x-n100p {transform: translateX(-100%) !important}
+	.lg\:translate-y-0 {transform: translateY(0) !important}
+	.lg\:translate-y-25p {transform: translateY(25%) !important}
+	.lg\:translate-y-50p {transform: translateY(50%) !important}
+	.lg\:translate-y-75p {transform: translateY(75%) !important}
+	.lg\:translate-y-100p {transform: translateY(100%) !important}
+	.lg\:translate-y-n25p {transform: translateY(-25%) !important}
+	.lg\:translate-y-n50p {transform: translateY(-50%) !important}
+	.lg\:translate-y-n75p {transform: translateY(-75%) !important}
+	.lg\:translate-y-n100p {transform: translateY(-100%) !important}
 	.lg\:m-auto {margin: auto !important;}
 	.lg\:m-0 {margin: 0 !important;}
 	.lg\:m-1 {margin: 0.1rem !important;}
@@ -6230,6 +6301,24 @@
 	.xl\:right-100p {right: 100% !important;}
 	.xl\:right-n50p {right: -50% !important;}
 	.xl\:right-50p {right: 50% !important;}
+	.xl\:translate-x-0 {transform: translateX(0) !important}
+	.xl\:translate-x-25p {transform: translateX(25%) !important}
+	.xl\:translate-x-50p {transform: translateX(50%) !important}
+	.xl\:translate-x-75p {transform: translateX(75%) !important}
+	.xl\:translate-x-100p {transform: translateX(100%) !important}
+	.xl\:translate-x-n25p {transform: translateX(-25%) !important}
+	.xl\:translate-x-n50p {transform: translateX(-50%) !important}
+	.xl\:translate-x-n75p {transform: translateX(-75%) !important}
+	.xl\:translate-x-n100p {transform: translateX(-100%) !important}
+	.xl\:translate-y-0 {transform: translateY(0) !important}
+	.xl\:translate-y-25p {transform: translateY(25%) !important}
+	.xl\:translate-y-50p {transform: translateY(50%) !important}
+	.xl\:translate-y-75p {transform: translateY(75%) !important}
+	.xl\:translate-y-100p {transform: translateY(100%) !important}
+	.xl\:translate-y-n25p {transform: translateY(-25%) !important}
+	.xl\:translate-y-n50p {transform: translateY(-50%) !important}
+	.xl\:translate-y-n75p {transform: translateY(-75%) !important}
+	.xl\:translate-y-n100p {transform: translateY(-100%) !important}
 	.xl\:m-auto {margin: auto !important;}
 	.xl\:m-0 {margin: 0 !important;}
 	.xl\:m-1 {margin: 0.1rem !important;}
@@ -7688,6 +7777,24 @@
 	.xxl\:right-100p {right: 100% !important;}
 	.xxl\:right-n50p {right: -50% !important;}
 	.xxl\:right-50p {right: 50% !important;}
+	.xxl\:translate-x-0 {transform: translateX(0) !important}
+	.xxl\:translate-x-25p {transform: translateX(25%) !important}
+	.xxl\:translate-x-50p {transform: translateX(50%) !important}
+	.xxl\:translate-x-75p {transform: translateX(75%) !important}
+	.xxl\:translate-x-100p {transform: translateX(100%) !important}
+	.xxl\:translate-x-n25p {transform: translateX(-25%) !important}
+	.xxl\:translate-x-n50p {transform: translateX(-50%) !important}
+	.xxl\:translate-x-n75p {transform: translateX(-75%) !important}
+	.xxl\:translate-x-n100p {transform: translateX(-100%) !important}
+	.xxl\:translate-y-0 {transform: translateY(0) !important}
+	.xxl\:translate-y-25p {transform: translateY(25%) !important}
+	.xxl\:translate-y-50p {transform: translateY(50%) !important}
+	.xxl\:translate-y-75p {transform: translateY(75%) !important}
+	.xxl\:translate-y-100p {transform: translateY(100%) !important}
+	.xxl\:translate-y-n25p {transform: translateY(-25%) !important}
+	.xxl\:translate-y-n50p {transform: translateY(-50%) !important}
+	.xxl\:translate-y-n75p {transform: translateY(-75%) !important}
+	.xxl\:translate-y-n100p {transform: translateY(-100%) !important}
 	.xxl\:m-auto {margin: auto !important;}
 	.xxl\:m-0 {margin: 0 !important;}
 	.xxl\:m-1 {margin: 0.1rem !important;}
