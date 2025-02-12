@@ -18,26 +18,20 @@
 
 /* SM */
 @media (min-width: 576px) {
-
 }
 /* MD */
 @media (min-width: 768px) {
-
 }
 /* LG */
 @media (min-width: 992px) {
-
 }
 /* XL */
 @media (min-width: 1280px) {
-
 }
 /* XXL */
 @media (min-width: 1536px) {
 
 }
-
-
 /* XXL */
 @media (min-width: 1536px) {
 	:root {
@@ -118,7 +112,6 @@
 		scroll-behavior: smooth;
 	}
 }
-
 
 /**
  * Document
