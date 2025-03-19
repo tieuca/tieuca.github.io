@@ -1,6 +1,6 @@
 /*! Text for Local CSS ✨ v1.0.2 | MIT License
- * Copyright 2023-2024 REDX.Media.
- * Date 02/10/2024
+ * Copyright 2023-2025 REDX.Media.
+ * Date 17/01/2025
  */
 :root {
 	--FONT-FAMILIES-----------------: #01;
@@ -56,8 +56,9 @@
 
 .lh-1 {line-height: 1 !important}
 .lh-sm {line-height: 1.25 !important}
-.lh-base {line-height: 1.5 !important}
-.lh-lg {line-height: 2 !important}
+.lh-md, .lh-base {line-height: 1.5 !important}
+.lh-lg {line-height: 1.7 !important}
+.lh-xl, .lh-2 {line-height: 2 !important}
 .text-left {text-align: left !important}
 .text-center {text-align: center !important}
 .text-right {text-align: right !important}
@@ -101,12 +102,17 @@
 .fw-800, .extrabold, .fw-extrabold, .hover\.extrabold:hover {font-weight: var(--extrabold) !important}
 .fw-900, .ultrabold, .fw-ultrabold, .hover\.ultrabold:hover {font-weight: var(--ultrabold) !important}
 .text-n-line, .text-2line {
-	--n-line: 2;
+	--font-size: 16px;
+	--line-height: 1.5;
+	--line-clamp: 2;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: var(--n-line);
+	-webkit-line-clamp: var(--line-clamp);
+	font-size: var(--font-size);
+	line-height: var(--line-height);
+	height: calc( var(--font-size) * var(--line-height) * var(--line-clamp) );
 }
 
 /* SM */
