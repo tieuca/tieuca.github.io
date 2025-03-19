@@ -6,8 +6,8 @@
 @import "btn.css";
 @import "effect.css";
 /*!
- * Local CSS ✨ v1.0.1
- * Copyright 10/05/2024
+ * Local CSS ✨ v1.0.2
+ * Copyright 19/03/2025
  */
 /**
  * Styles
@@ -18,26 +18,20 @@
 
 /* SM */
 @media (min-width: 576px) {
-
 }
 /* MD */
 @media (min-width: 768px) {
-
 }
 /* LG */
 @media (min-width: 992px) {
-
 }
 /* XL */
 @media (min-width: 1280px) {
-
 }
 /* XXL */
 @media (min-width: 1536px) {
 
 }
-
-
 /* XXL */
 @media (min-width: 1536px) {
 	:root {
@@ -51,8 +45,8 @@
 [data-theme=light],
 :root:not([data-theme=dark]) {
 
-	--primary: #0d6efd;
-	--secondary: #7c0fd1;
+	--primary: #7c0fd1;
+	--secondary: #c92027;
 	--tertiary: #046a38;
 	--success: #198754;
 	--info: #0dcaf0;
@@ -76,8 +70,8 @@
 	--black: #000;
 	--gray: #6c757d;
 
-	--primary-rgb: 13, 110, 253;
-	--secondary-rgb: 108, 117, 125;
+	--primary-rgb: 124, 15, 209;
+	--secondary-rgb: 201, 32, 39;
 	--success-rgb: 25, 135, 84;
 	--info-rgb: 13, 202, 240;
 	--warning-rgb: 255, 193, 7;
@@ -86,7 +80,7 @@
 	--dark-rgb: 33, 37, 41;
 	--white-rgb: 255, 255, 255;
 	--black-rgb: 0, 0, 0;
-	
+
 	--bg-body-rgb: 255, 255, 255;
 	--bg-body: #FFF;
 	--bg-primary: #FFF;
@@ -119,7 +113,6 @@
 	}
 }
 
-
 /**
  * Document
  * Content-box & Responsive typography
@@ -130,13 +123,11 @@
 	box-sizing: border-box;
 	background-repeat: no-repeat;
 }
-
 ::before,
 ::after {
 	text-decoration: inherit;
 	vertical-align: inherit;
 }
-
 html {
 	/* 1rem = 10px */
 	font-size: 62.5%;
@@ -160,14 +151,3 @@ body {
 	font-family: "Segoe UI", "Helvetica Neue", sans-serif; /* fallback */
 	font-family: var(--font-family-sans);
 }
-
-
-
-
-
-
-
-
-
-
-

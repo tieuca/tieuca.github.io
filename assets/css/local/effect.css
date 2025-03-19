@@ -1,6 +1,6 @@
 /*!
- * effect.css  v1.0-alpha1
- * Copyright 07/04/2023
+ * Effect.css  v1.0
+ * Copyright 19/03/2025
  */
 
 /* Line */
@@ -14,7 +14,6 @@
 	width: 90vw;
 	z-index: 0;
 }
-
 .lines .line {
 	position: absolute;
 	width: 1px;
@@ -24,7 +23,6 @@
 	background: rgba(255, 255, 255, 0.1);
 	overflow: hidden;
 }
-
 .lines .line::after {
 	content: "";
 	display: block;
@@ -41,81 +39,20 @@
 	-webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
 	animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
 }
-
 .lines .line:nth-child(1) {
 	margin-left: -25%
 }
-
 .lines .line:nth-child(1)::after {
 	-webkit-animation-delay: 2s;
 	animation-delay: 2s;
 }
-
 .lines .line:nth-child(3) {
 	margin-left: 25%
 }
-
 .lines .line:nth-child(3)::after {
 	-webkit-animation-delay: 2.5s;
 	animation-delay: 2.5s;
 }
-
-.lines {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 100%;
-	margin: auto;
-	width: 90vw;
-	z-index: 0;
-}
-
-.lines .line {
-	position: absolute;
-	width: 1px;
-	height: 100%;
-	top: 0;
-	left: 50%;
-	background: rgba(255, 255, 255, 0.1);
-	overflow: hidden;
-}
-
-.lines .line::after {
-	content: "";
-	display: block;
-	position: absolute;
-	height: 15vh;
-	width: 100%;
-	top: -50%;
-	left: 0;
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 75%, white 100%);
-	-webkit-animation: line-run 7s 0s infinite;
-	animation: line-run 7s 0s infinite;
-	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
-	-webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-	animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-}
-
-.lines .line:nth-child(1) {
-	margin-left: -25%
-}
-
-.lines .line:nth-child(1)::after {
-	-webkit-animation-delay: 2s;
-	animation-delay: 2s;
-}
-
-.lines .line:nth-child(3) {
-	margin-left: 25%
-}
-
-.lines .line:nth-child(3)::after {
-	-webkit-animation-delay: 2.5s;
-	animation-delay: 2.5s;
-}
-
 @keyframes line-run {
 	0% {
 		top: -100%
@@ -130,17 +67,14 @@
 	-webkit-animation: movedelement 5s linear infinite;
 	animation: movedelement 5s linear infinite;
 }
-
 .moved_element2 {
 	-webkit-animation: movedelement2 8s linear infinite;
 	animation: movedelement2 8s linear infinite;
 }
-
 .moved_element3 {
 	-webkit-animation: movedelement3 12s linear infinite;
 	animation: movedelement3 12s linear infinite;
 }
-
 @-webkit-keyframes movedelement {
 	0% {
 		-webkit-transform: translate(0);
@@ -167,7 +101,6 @@
 		transform: translate(0);
 	}
 }
-
 @keyframes movedelement {
 	0% {
 		-webkit-transform: translate(0);
@@ -194,7 +127,6 @@
 		transform: translate(0);
 	}
 }
-
 @-webkit-keyframes movedelement2 {
 	0% {
 		-webkit-transform: translate(0);
@@ -221,7 +153,6 @@
 		transform: translate(0);
 	}
 }
-
 @keyframes movedelement2 {
 	0% {
 		-webkit-transform: translate(0);
@@ -248,7 +179,6 @@
 		transform: translate(0);
 	}
 }
-
 @-webkit-keyframes movedelement3 {
 	0% {
 		-webkit-transform: translate(0);
@@ -275,7 +205,6 @@
 		transform: translate(0);
 	}
 }
-
 @keyframes movedelement3 {
 	0% {
 		-webkit-transform: translate(0);
