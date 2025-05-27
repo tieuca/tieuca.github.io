@@ -1,0 +1,240 @@
+/**
+ * File: ats-admin-metaboxes.css
+ *
+ * CSS tùy chỉnh cho các metaboxes của plugin Advanced Thunder Sales.
+ *
+ * @package     AdvancedThunderSales
+ * @subpackage  Assets/CSS
+ * @since       1.0.0.0
+ * @version     1.0.2.6
+ * @lastupdate  26/05/2025 05:38 PM
+ */
+
+.ats-metabox-table th {
+    text-align: left;
+    width: 200px;
+    padding-right: 10px;
+    vertical-align: top; 
+}
+
+.ats-metabox-table td {
+    vertical-align: top; 
+}
+
+.ats-metabox-table .description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.ats-time-fields-daily {
+    display: none;
+}
+
+/* Toggle Switch Styles */
+.ats-toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px; 
+    height: 22px; 
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.ats-toggle-switch input { opacity: 0; width: 0; height: 0; }
+.ats-toggle-slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; -webkit-transition: .4s; transition: .4s; border-radius: 22px; }
+.ats-toggle-slider:before { position: absolute; content: ""; height: 16px; width: 16px; left: 3px; bottom: 3px; background-color: white; -webkit-transition: .4s; transition: .4s; border-radius: 50%; }
+input:checked + .ats-toggle-slider { background-color: #2271b1; }
+input:focus + .ats-toggle-slider { box-shadow: 0 0 0 1px #2271b1, 0 0 2px 1px rgba(34,113,177,0.8); }
+input:checked + .ats-toggle-slider:before { -webkit-transform: translateX(18px); -ms-transform: translateX(18px); transform: translateX(18px); }
+
+/* --- Campaign Products Metabox Styles --- */
+#ats_campaign_products_wrapper {
+    overflow-x: auto; 
+}
+#ats_campaign_products_wrapper .ats-product-search-wrapper {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+}
+#ats_campaign_products_wrapper .ats-product-search-wrapper p {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center; 
+}
+#ats_campaign_products_wrapper .ats-product-search-wrapper label {
+    margin-right: 10px;
+    flex-shrink: 0; 
+    margin-bottom: 5px; 
+}
+#ats_campaign_products_wrapper .ats-product-search-wrapper .select2-container {
+    width: 100% !important; 
+    max-width: 400px; 
+    margin-right: 10px;
+    margin-bottom: 5px; 
+}
+@media (max-width: 782px) { 
+    #ats_campaign_products_wrapper .ats-product-search-wrapper label,
+    #ats_campaign_products_wrapper .ats-product-search-wrapper .select2-container {
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
+    }
+}
+
+
+.ats-campaign-products-table {
+    margin-top: 10px;
+    width: 100%; 
+    table-layout: auto !important; 
+    border-collapse: collapse; 
+}
+.ats-campaign-products-table th,
+.ats-campaign-products-table td {
+    vertical-align: middle; 
+    padding: 8px;
+    word-wrap: break-word; 
+    min-width: 80px; 
+    border: 1px solid #e0e0e0; 
+}
+.ats-campaign-products-table thead th {
+    font-weight: bold; 
+    background-color: #f5f5f5; 
+}
+
+.ats-campaign-products-table .ats-col-image { width: 60px; min-width: 60px !important; text-align: center; } 
+.ats-campaign-products-table .ats-col-image img { max-width: 50px; max-height: 50px; border: 1px solid #eee; display: block; margin: auto; }
+
+#ats_campaign_products_wrapper .ats-campaign-products-table th.ats-col-name,
+#ats_campaign_products_wrapper .ats-campaign-products-table td.ats-col-name { 
+    min-width: 200px; 
+    width: auto; 
+}
+.ats-campaign-products-table .ats-col-name a {
+    display: block; 
+    word-break: break-word; 
+    font-weight: bold;
+}
+.ats-campaign-products-table .ats-col-name .wc-item-meta, 
+.ats-campaign-products-table .ats-col-name .display_meta, 
+.ats-campaign-products-table .ats-col-name dl.variation,
+.ats-campaign-products-table .ats-col-name span.description { 
+    display: none !important; 
+}
+.ats-campaign-products-table .ats-col-name .ats-product-stock-status {
+    display: block;
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 3px;
+    font-style: italic;
+}
+.ats-campaign-products-table .ats-col-name .ats-product-stock-status.instock { color: #7ad03a; }
+.ats-campaign-products-table .ats-col-name .ats-product-stock-status.outofstock { color: #a00; }
+
+.ats-campaign-products-table tr.ats-variation-row td.ats-col-name {
+    padding-left: 30px !important; 
+    position: relative;
+}
+.ats-campaign-products-table tr.ats-variation-row td.ats-col-name::before {
+    content: '\21B3'; 
+    position: absolute;
+    left: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em; 
+    color: #888;
+    font-family: Arial, sans-serif; 
+}
+.ats-campaign-products-table tr.ats-parent-row {
+    background-color: #f9f9f9; 
+    font-weight: bold;
+}
+.ats-campaign-products-table tr.ats-parent-row td {
+    border-top: 2px solid #ddd; 
+}
+.ats-campaign-products-table tr.ats-parent-row:first-child td {
+    border-top: none;
+}
+.ats-campaign-products-table .ats-col-sku { 
+    min-width: 100px !important;
+}
+.ats-campaign-products-table .ats-col-price { 
+    min-width: 100px !important;
+    text-align: right; 
+}
+.ats-campaign-products-table .ats-col-price del,
+.ats-campaign-products-table .ats-col-price ins {
+    display: block; 
+    text-decoration: none; 
+}
+.ats-campaign-products-table .ats-col-price del {
+    color: #999; 
+    text-decoration: line-through; 
+    font-size: 0.9em;
+}
+.ats-campaign-products-table .ats-col-price ins .woocommerce-Price-amount,
+.ats-campaign-products-table .ats-col-price > .woocommerce-Price-amount { 
+    font-weight: bold;
+}
+
+.ats-campaign-products-table .ats-col-fs-price,
+.ats-campaign-products-table .ats-col-fs-stock,
+.ats-campaign-products-table .ats-col-sold,
+.ats-campaign-products-table .ats-col-virtual-sold-toggle { 
+    width: 90px;
+    text-align: center; 
+}
+.ats-campaign-products-table .ats-col-fs-price input,
+.ats-campaign-products-table .ats-col-fs-stock input,
+.ats-campaign-products-table .ats-col-sold input {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: right;
+}
+.ats-campaign-products-table .ats-col-sold input[readonly] {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+    border-style: dashed; 
+    border-width: 1px;
+    color: #555;
+}
+
+.ats-campaign-products-table .ats-col-actions { width: 80px; min-width: 50px !important; text-align: center; }
+.ats-campaign-products-table .ats-col-checkbox { width: 30px; min-width: 30px !important; text-align: center; }
+.ats-campaign-products-table .check-column { 
+    padding: 8px 0 8px 3px;
+    vertical-align: middle;
+} 
+
+.ats-campaign-products-table .check-column input { 
+    margin: 0;
+}
+.ats-campaign-products-table .no-items td {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+}
+.ats-campaign-products-table tfoot th {
+    text-align: left;
+}
+
+.ats-campaign-products-table .button-link-delete .dashicons {
+    font-size: 18px;
+    vertical-align: middle;
+}
+/*
+-----------------------------------------------------------------------------------
+ Ghi chú phiên bản và cập nhật:
+-----------------------------------------------------------------------------------
+ *
+ * Phiên bản 1.0.2.6 (26/05/2025 05:38 PM)
+ * - Loại bỏ thuộc tính `width` khỏi các cột .ats-col-sku, .ats-col-price, và nhóm cột input (fs-price, fs-stock, etc.).
+ * - Giữ lại `min-width !important` và `max-width` (nếu có) để kiểm soát kích thước cột với `table-layout: auto`.
+ * - Cập nhật ghi chú thời gian.
+ *
+ * Phiên bản 1.0.2.5 (26/05/2025 05:25 PM)
+ * - Thêm `box-sizing: border-box;` cho tất cả th, td.
+ * - Thêm `white-space: nowrap;` cho thead th để thử ngăn tiêu đề cột bị xuống dòng.
+ * - Tăng độ ưu tiên cho selector của cột tên sản phẩm bằng cách thêm ID của wrapper.
+ *
+ * (Các phiên bản cũ hơn được lược bỏ)
+ */
