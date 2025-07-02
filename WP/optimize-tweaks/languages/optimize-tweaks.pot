@@ -1,0 +1,370 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Optimize X Tweaks\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-26 09:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.0; wp-6.8.1; php-7.4.33\n"
+"X-Domain: optimize-tweaks"
+
+#: src/App/Modules/Control.php:146 src/App/Modules/Control.php:169
+#: src/App/Modules/Control.php:193
+msgid ""
+" to disable it via plugin settings. We suggest managing it from one place "
+"only."
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "#"
+msgstr ""
+
+#: src/App/Settings.php:437 src/App/Init.php:105
+msgid "Activate"
+msgstr ""
+
+#: src/App/Settings.php:371
+msgid "Activate Plugin"
+msgstr ""
+
+#: src/App/Init.php:103
+msgid "Activating..."
+msgstr ""
+
+#: src/App/Settings.php:465 src/App/Init.php:107
+msgid "Active"
+msgstr ""
+
+#: src/App/Settings.php:164
+msgid "Add rel=nofollow & sponsored"
+msgstr ""
+
+#: src/App/Settings.php:217
+msgid "Add tinymce editor to the excerpt"
+msgstr ""
+
+#: src/App/Settings.php:204
+msgid "Adds a tinymce editor to the category description box"
+msgstr ""
+
+#: src/App/Settings.php:124
+msgid "Admin Notice"
+msgstr ""
+
+#: src/App/Settings.php:310
+msgid ""
+"Administrator role user can take dump of the mysql database by single click."
+msgstr ""
+
+#: src/App/Settings.php:349
+msgid "All Core Updates"
+msgstr ""
+
+#: src/App/Settings.php:118
+msgid "All Dashboard"
+msgstr ""
+
+#. Description of the plugin
+msgid "An ecommerce toolkit that helps you sell anything. Beautifully."
+msgstr ""
+
+#: src/App/Settings.php:288
+msgid "Anti-Spam Comments"
+msgstr ""
+
+#: src/App/Settings.php:289
+msgid ""
+"Automatically checks all comments and filters out the ones that look like "
+"spam."
+msgstr ""
+
+#: src/App/Settings.php:232
+msgid "Back To Top In WP Admin Area"
+msgstr ""
+
+#: src/App/Settings.php:334
+msgid "Blocked Admin Users"
+msgstr ""
+
+#: src/App/Settings.php:203
+msgid "Category Description"
+msgstr ""
+
+#: src/Framework/WPSettings/WPSettings.php:572
+msgid "Changes saved successfully. Page will reload to apply changes."
+msgstr ""
+
+#: src/App/Settings.php:196
+msgid "Classic Widgets"
+msgstr ""
+
+#: src/App/Settings.php:165
+msgid "Clean HTML"
+msgstr ""
+
+#: src/App/Modules/Control.php:145 src/App/Modules/Control.php:168
+#: src/App/Modules/Control.php:192
+msgid "Click here"
+msgstr ""
+
+#: src/App/Settings.php:299
+msgid "Comment Media"
+msgstr ""
+
+#: src/App/Settings.php:41
+msgid "Create new elements for Flatsome"
+msgstr ""
+
+#: src/App/Settings.php:448 src/App/Init.php:106
+msgid "Deactivate"
+msgstr ""
+
+#: src/App/Init.php:104
+msgid "Deactivating..."
+msgstr ""
+
+#: src/App/Settings.php:242
+msgid "Default featured image"
+msgstr ""
+
+#: src/App/Settings.php:238
+msgid "Delete Attached Media"
+msgstr ""
+
+#: src/App/Modules/Control.php:142
+msgid "DISALLOW_FILE_EDIT / DISALLOW_FILE_MODS"
+msgstr ""
+
+#: src/App/Settings.php:197
+msgid "Display a legacy widget."
+msgstr ""
+
+#: src/App/Init.php:165
+msgid "Donate"
+msgstr ""
+
+#: src/App/Settings.php:356
+msgid ""
+"Enable <code>WP_DEBUG</code> mode. <br /><strong>Warning:</strong> Please "
+"DISABLE this feature after use."
+msgstr ""
+
+#: src/App/Settings.php:452
+msgid "Enter your license key to receive automatic updates and support."
+msgstr ""
+
+#: src/App/Settings.php:309
+msgid "Export to SQL"
+msgstr ""
+
+#: src/App/Settings.php:48
+msgid "Get REDX EXtra PRO now"
+msgstr ""
+
+#: src/App/Settings.php:465
+msgid "Inactive"
+msgstr ""
+
+#: src/App/Ajax.php:56
+msgid "Invalid or expired license key."
+msgstr ""
+
+#: src/App/Modules/Control.php:143 src/App/Modules/Control.php:166
+#: src/App/Modules/Control.php:190
+msgid "is already enabled or defined somewhere else on your site."
+msgstr ""
+
+#: src/App/Settings.php:107
+msgid "JPEG compression level"
+msgstr ""
+
+#: src/App/Settings.php:368
+msgid "License"
+msgstr ""
+
+#: src/App/Ajax.php:52
+msgid "License activated successfully!"
+msgstr ""
+
+#: src/App/Ajax.php:72
+msgid "License deactivated."
+msgstr ""
+
+#: src/App/Settings.php:416
+msgid "License Key"
+msgstr ""
+
+#: src/App/Settings.php:41
+msgid "Like this plugin? Check out our other WordPress products:"
+msgstr ""
+
+#: src/App/Settings.php:59
+msgid "List Module"
+msgstr ""
+
+#: src/App/Settings.php:226
+msgid "Making it stick to the bottom of the page when scrolling down the page"
+msgstr ""
+
+#: src/App/Settings.php:362
+msgid "Nags & Notices"
+msgstr ""
+
+#: src/App/Settings.php:113
+msgid "New private window"
+msgstr ""
+
+#. Name of the plugin
+msgid "Optimize X Tweaks"
+msgstr ""
+
+#: src/App/Settings.php:45
+msgid "Our WordPress Products"
+msgstr ""
+
+#: src/App/Ajax.php:39 src/App/Ajax.php:67
+msgid "Permission denied."
+msgstr ""
+
+#: src/App/Ajax.php:45
+msgid "Please enter a license key."
+msgstr ""
+
+#: src/App/Settings.php:48
+msgid "Please upgrade to the PRO plan to unlock more awesome features."
+msgstr ""
+
+#: src/App/Settings.php:225
+msgid "Publish Button"
+msgstr ""
+
+#: src/App/Init.php:166
+msgid "Rate WP EXtra on WordPress.org"
+msgstr ""
+
+#: src/App/Settings.php:262
+msgid "Redirect 404 to Home"
+msgstr ""
+
+#: src/App/Settings.php:267
+msgid "Redirect Single Post"
+msgstr ""
+
+#: src/App/Settings.php:295
+msgid "Redirect to link"
+msgstr ""
+
+#: src/App/Settings.php:268
+msgid "Redirect to the post if the search results return only one post."
+msgstr ""
+
+#: src/App/Settings.php:274
+msgid "Remove link in the tags from all post"
+msgstr ""
+
+#: src/App/Settings.php:328
+msgid "Restricted backend access for non-admins."
+msgstr ""
+
+#: src/App/Settings.php:171
+msgid "Signature"
+msgstr ""
+
+#: src/App/Settings.php:467
+msgid "Status"
+msgstr ""
+
+#: src/App/Settings.php:273
+msgid "Tag links"
+msgstr ""
+
+#: src/App/Settings.php:55
+msgid "The module operates independently. Please enable it as needed."
+msgstr ""
+
+#: src/App/Settings.php:37
+#, php-format
+msgid ""
+"The plugin developer has dedicated <strong>%1$s</strong> days to this "
+"project. If you like it, you can support the author with <a href=\"%2$s\" "
+"target=\"_blank\">a beer 🍻 / coffee ☕️</a> !"
+msgstr ""
+
+#: src/App/Settings.php:339
+msgid "Theme & Plugin Auto-update"
+msgstr ""
+
+#: src/App/Settings.php:344
+msgid "Theme & Plugin Editors"
+msgstr ""
+
+#: src/App/Settings.php:243
+msgid "This featured image will show up if no featured image is set"
+msgstr ""
+
+#. Author of the plugin
+msgid "TieuCA"
+msgstr ""
+
+#: src/App/Settings.php:314
+msgid "Transfer Plugin"
+msgstr ""
+
+#: src/App/Init.php:144
+msgid "Upgrade"
+msgstr ""
+
+#: src/App/Settings.php:49
+msgid "Upgrade to Optimize X Tweaks PRO"
+msgstr ""
+
+#: src/App/Settings.php:150
+msgid "Use the classic WordPress editor."
+msgstr ""
+
+#: src/App/Settings.php:263
+msgid ""
+"Use the shortcode: <code>[redirect]</code>. If you are using the Flatsome "
+"Theme, it will be configured automatically."
+msgstr ""
+
+#: src/App/Settings.php:172
+#, php-format
+msgid "Used %1$s or %2$s"
+msgstr ""
+
+#: src/App/Settings.php:113
+msgid ""
+"When configured, this feature modifies your WordPress login URL (slug) to "
+"the specified string and prevents direct access to the wp-admin and wp-login "
+"endpoints."
+msgstr ""
+
+#: src/App/Modules/Control.php:165
+msgid "WP_AUTO_UPDATE_CORE"
+msgstr ""
+
+#: src/App/Modules/Control.php:189
+msgid "WP_DEBUG"
+msgstr ""
+
+#: src/App/Settings.php:306
+msgid ""
+"You can transfer the saved options data between different installs by "
+"copying the text inside the text box. To import data from another install, "
+"replace the data in the text box with the one from another install and click "
+"\"Import\"."
+msgstr ""
+
+#: src/App/Modules/Control.php:33 src/App/Modules/Control.php:220
+msgid "You do not have permission to access this page."
+msgstr ""

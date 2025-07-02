@@ -1,0 +1,1 @@
+<textarea name="<?php echo esc_attr($option->get_name_attribute()); ?>" id="<?php echo $option->get_id_attribute(); ?>" class="wp-settings-code-editor <?php echo $option->get_input_class_attribute(); ?>"><?php echo wp_unslash($option->get_value_attribute()); ?></textarea>
