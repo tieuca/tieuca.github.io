@@ -1,0 +1,1 @@
+<input name="<?php echo esc_attr($option->get_name_attribute()); ?>" id="<?php echo $option->get_id_attribute(); ?>" type="text" value="<?php echo $option->get_value_attribute(); ?>" class="wps-color-picker <?php echo $option->get_input_class_attribute(); ?>">
