@@ -15,38 +15,53 @@ class Media extends OptionAbstract
         parent::__construct($section, $args);
     }
 
-    public function get_preview_url()
-    {
+    /**
+     * Lấy URL xem trước cho một tệp đính kèm (media).
+     * Đã được cải tiến để hỗ trợ các định dạng SVG và WebP.
+     *
+     * @return string URL xem trước hoặc URL của biểu tượng thay thế.
+     */
+    public function get_preview_url() {
         $value = $this->get_value_attribute();
-
+    
         if (empty($value)) {
             return '';
         }
-
-        $attachment = wp_get_attachment_metadata($value);
-        $fallback = '/wp-includes/images/media/document.png';
-
-        if (! $attachment && $value) {
+    
+        if (filter_var($value, FILTER_VALIDATE_URL)) {
             return $value;
-        } elseif (! $attachment) {
-            return $fallback;
+        }
+    
+        $attachment_id = absint($value);
+        if (!$attachment_id) {
+            return '';
+        }
+    
+        $attachment_url = wp_get_attachment_url($attachment_id);
+        $mime_type = get_post_mime_type($attachment_id);
+    
+        if (!$attachment_url) {
+            return '/wp-includes/images/media/document.png';
         }
 
-        if (isset($attachment['image_meta'])) {
-            return wp_get_attachment_image_src($value, 'thumbnail')[0];
+        if (in_array($mime_type, ['image/svg+xml', 'image/webp'])) {
+            return $attachment_url;
         }
-
-        if (isset($attachment['mime_type'])) {
-            if (strpos($attachment['mime_type'], 'video') !== false) {
-                return '/wp-includes/images/media/video.png';
-            }
-
-            if (strpos($attachment['mime_type'], 'audio') !== false) {
-                return '/wp-includes/images/media/audio.png';
-            }
+        
+        $image_src = wp_get_attachment_image_src($attachment_id, 'thumbnail');
+        if ($image_src) {
+            return $image_src[0];
         }
-
-        return $fallback;
+    
+        if (strpos($mime_type, 'video') !== false) {
+            return '/wp-includes/images/media/video.png';
+        }
+    
+        if (strpos($mime_type, 'audio') !== false) {
+            return '/wp-includes/images/media/audio.png';
+        }
+    
+        return '/wp-includes/images/media/document.png';
     }
 
     public function get_media_library_config()
@@ -73,13 +88,11 @@ class Media extends OptionAbstract
                 }
 
                 .wps-media-wrapper .wps-media-preview {
-                    outline: 1px solid #0000001a;
                     width: 80px;
-                    border-radius: 4px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    padding: 10px;
+                    padding: 10px 0;
                     display: none;
                 }
 

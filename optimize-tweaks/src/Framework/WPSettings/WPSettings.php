@@ -233,8 +233,7 @@ class WPSettings {
     }
 
 
-    public function styling()
-    {
+    public function styling() {
         if (! $this->is_on_settings_page()) {
             return;
         }
@@ -243,8 +242,7 @@ class WPSettings {
         <?php
     }
     
-    public function enqueue_styling()
-    {
+    public function enqueue_styling() {
         if ($this->styling_loaded) {
             return;
         }
@@ -258,22 +256,26 @@ class WPSettings {
             
             wp_enqueue_script('clipboard');
             wp_enqueue_style('wp-components');
-            wp_enqueue_style('izitoast', $resources_url . 'vendor/iziToast/iziToast.min.css');
-            wp_enqueue_script('izitoast', $resources_url . 'vendor/iziToast/iziToast.min.js', array(), $this->version, true);
+            wp_enqueue_style('iziToast', $resources_url . 'vendor/iziToast/iziToast.min.css');
+            wp_enqueue_script('iziToast', $resources_url . 'vendor/iziToast/iziToast.min.js', array(), $this->version, true);
             wp_enqueue_script('sweetalert2', $resources_url . 'vendor/sweetalert2/sweetalert2.all.min.js', [], $version, true);
             wp_enqueue_script('jSticky', $resources_url . 'vendor/jSticky/jquery.jsticky.min.js', [], $this->version, true);
             wp_enqueue_style($main_handle, $resources_url . 'css/settings.css');
-            wp_enqueue_script($main_handle, $resources_url . 'js/settings.js', [], $this->version, true);
-            wp_enqueue_script($main_handle .'-admin', $resources_url . 'js/admin.js', array('jquery', 'wp-color-picker', 'izitoast'), $this->version, true);
-            wp_enqueue_script($main_handle .'-ajax', $resources_url . 'js/ajax.js', array('jquery', 'wp-color-picker', 'izitoast'), $this->version, true);
-            wp_enqueue_script($main_handle .'-conditional', $resources_url . 'js/conditional-logic.js', array('jquery'), $this->version, true);
-
+            wp_enqueue_script($main_handle . '-utils', $resources_url . 'js/app-utils.js', ['jquery', 'wp-i18n', 'iziToast', 'sweetalert2'], $this->version, true);
+            wp_enqueue_script($main_handle . '-ui', $resources_url . 'js/ui-helpers.js', ['jquery'], $this->version, true);
+            wp_enqueue_script($main_handle . '-conditional', $resources_url . 'js/conditional-logic.js', ['jquery'], $this->version, true);
+            wp_enqueue_script($main_handle . '-settings', $resources_url . 'js/settings-form.js', ['jquery'], $this->version, true);
+            wp_enqueue_script($main_handle, $resources_url . 'js/main.js', ['jquery', 'wp-i18n', $main_handle . '-utils', $main_handle . '-conditional', $main_handle . '-settings'], $this->version, true);
+            
+            // Gán bộ dịch 'az-settings' cho script 'ui-helpers.js'
+            //wp_set_script_translations($main_handle . '-ui', 'az-settings', OXT_PATH . '/languages');
+        
             $localized_strings = [
             'noChanges'           => __('No changes to save.', 'az-settings'),
             'areYouSure'          => __('Are you sure?', 'az-settings'),
             'restoreConfirm'      => __('All settings in this tab will be reset. This action cannot be undone.', 'az-settings'),
             'ajaxFailed'          => __('AJAX request failed. Please try again.', 'az-settings'),
-            'ajaxError'          => __('AJAX Error.', 'az-settings'),
+            'ajaxError'           => __('AJAX Error.', 'az-settings'),
             'error'               => __('Error', 'az-settings'),
             'saveSuccess'         => __('Changes saved successfully!', 'az-settings'),
             'saveError'           => __('Error saving settings:', 'az-settings'),

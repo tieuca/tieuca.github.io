@@ -1,4 +1,4 @@
-<div class="site-icon-section" data-media-library="<?php echo esc_attr(json_encode($option->get_media_library_config())); ?>">
+<div class="wps-media-wrapper" data-media-library="<?php echo esc_attr(json_encode($option->get_media_library_config())); ?>">
     <?php if($preview = $option->get_preview_url()) : ?>
         <div class="wps-media-preview" style="display: flex;">
             <img src="<?php echo esc_url($preview); ?>" />

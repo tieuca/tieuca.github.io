@@ -1,22 +1,19 @@
 /**
- * Advanced Conditional Logic System for AZ Settings Framework
- * Final version with fixed disabled/readonly behaviors and smooth animations.
+ * Advanced Conditional Logic System - Refactored Version
  *
- * @version 2.9.0
- * @since 2025-06-27
+ * @description Encapsulated into a self-contained module.
+ * It initializes the conditional logic and signals when it's ready.
+ *
+ * @version 2.0.0
  */
-jQuery(document).ready(function($) {
+const ConditionalLogicModule = (function($) {
 
-    const conditionalElements = $('tr[data-condition], .nav-section > a.nav-tab[data-condition]');
-    if (!conditionalElements.length) return;
+    // --- PRIVATE MEMBERS ---
+    let conditionalElements = null;
 
-    // Bọc nội dung của các hàng <tr> có điều kiện để có hiệu ứng mượt mà
-    $('tr[data-condition]').children('th, td').each(function() {
-        if ($(this).html().trim().length > 0) {
-            $(this).wrapInner('<div class="cell-content-wrapper" style="display: none;"></div>');
-        }
-    });
-
+    /**
+     * Lấy giá trị của một trường trong form, hỗ trợ nhiều loại input.
+     */
     function getFieldValue($field) {
         if (!$field.length) return null;
         if ($field.is('ul')) {
@@ -35,6 +32,9 @@ jQuery(document).ready(function($) {
         return $field.val();
     }
 
+    /**
+     * Đánh giá một quy tắc điều kiện đơn lẻ.
+     */
     function evaluateSingleRule(rule) {
         const $targetField = $(`#${rule.id}`);
         if (!$targetField.length) return false;
@@ -60,6 +60,9 @@ jQuery(document).ready(function($) {
         }
     }
 
+    /**
+     * Đánh giá một nhóm các quy tắc điều kiện (có thể lồng nhau).
+     */
     function evaluateRuleGroup(ruleGroup) {
         if (!Array.isArray(ruleGroup)) return false;
         const relation = (ruleGroup.relation === 'OR') ? 'OR' : 'AND';
@@ -72,6 +75,9 @@ jQuery(document).ready(function($) {
         return relation === 'AND';
     }
 
+    /**
+     * Áp dụng tất cả các điều kiện lên các phần tử trên trang.
+     */
     function applyAllConditions(useAnimation = true) {
         const animationSpeed = useAnimation ? 250 : 0;
 
@@ -140,26 +146,65 @@ jQuery(document).ready(function($) {
         }, animationSpeed + 50);
     }
 
-    const triggerFields = new Set();
-    conditionalElements.each(function() {
-        const conditions = $(this).data('condition');
-        if (!conditions) return;
-        function extractIds(ruleGroup) {
-            if (!ruleGroup) return;
-            const rules = ruleGroup.rules || ruleGroup;
-            Object.values(rules).forEach(ruleOrSubgroup => {
-                if (typeof ruleOrSubgroup === 'string') return;
-                if (ruleOrSubgroup.id) triggerFields.add(`#${ruleOrSubgroup.id}`);
-                else if (Array.isArray(ruleOrSubgroup)) extractIds(ruleOrSubgroup);
-            });
-        }
-        Object.values(conditions).forEach(extractIds);
-    });
+    /**
+     * Bắn ra tín hiệu báo cho các module khác rằng framework đã sẵn sàng.
+     */
+    const fireReadySignal = () => {
+        console.log('Framework is ready. Firing az-settings:ready signal.');
+        window.azSettingsFrameworkReady = true; // Dựng cờ toàn cục
+        jQuery(document).trigger('az-settings:ready');
+    };
 
-    const triggerSelector = Array.from(triggerFields).join(', ');
-    if (triggerSelector) {
-        $('#post-body').on('change input click', triggerSelector, () => applyAllConditions(true));
-    }
-    
-    applyAllConditions(false);
-});
+    // --- PUBLIC API ---
+    return {
+        /**
+         * Phương thức khởi tạo công khai cho module.
+         * Đây là điểm bắt đầu duy nhất.
+         */
+        init: function() {
+            console.log('Conditional Logic module starting...');
+            conditionalElements = $('tr[data-condition], .nav-section > a.nav-tab[data-condition]');
+            
+            // Nếu không có phần tử điều kiện nào, bắn tín hiệu ngay và thoát.
+            if (!conditionalElements.length) {
+                fireReadySignal();
+                return;
+            }
+
+            // Bọc nội dung của các hàng <tr> có điều kiện để có hiệu ứng mượt mà
+            $('tr[data-condition]').children('th, td').each(function() {
+                if ($(this).html().trim().length > 0) {
+                    $(this).wrapInner('<div class="cell-content-wrapper" style="display: none;"></div>');
+                }
+            });
+
+            // Tìm các trường trigger
+            const triggerFields = new Set();
+            conditionalElements.each(function() {
+                const conditions = $(this).data('condition');
+                if (!conditions) return;
+                function extractIds(ruleGroup) {
+                    if (!ruleGroup) return;
+                    const rules = ruleGroup.rules || ruleGroup;
+                    Object.values(rules).forEach(ruleOrSubgroup => {
+                        if (typeof ruleOrSubgroup === 'string') return;
+                        if (ruleOrSubgroup.id) triggerFields.add(`#${ruleOrSubgroup.id}`);
+                        else if (Array.isArray(ruleOrSubgroup)) extractIds(ruleOrSubgroup);
+                    });
+                }
+                Object.values(conditions).forEach(extractIds);
+            });
+            
+            // Gán sự kiện cho các trường trigger
+            const triggerSelector = Array.from(triggerFields).join(', ');
+            if (triggerSelector) {
+                $('#post-body').on('change input click', triggerSelector, () => applyAllConditions(true));
+            }
+
+            // Áp dụng điều kiện lần đầu và bắn tín hiệu
+            applyAllConditions(false);
+            fireReadySignal();
+        }
+    };
+
+})(jQuery);

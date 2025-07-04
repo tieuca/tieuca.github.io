@@ -21,10 +21,10 @@
         <?php endif; ?>
     </th>
     <td>
-        <?php echo $field_content; ?>
-        
-        <?php $option->render_description(); ?>
-        
-        <?php $option->render_error(); ?>
+        <div class="field-type-wrapper <?php echo esc_attr($option->get_type_class()); ?>">
+            <?php echo $field_content; ?>
+            <?php $option->render_description(); ?>
+            <?php $option->render_error(); ?>
+        </div>
     </td>
 </tr>

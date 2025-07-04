@@ -61,6 +61,19 @@ abstract class OptionAbstract
     }
 
     /**
+     * Get a sanitized, kebab-case CSS class name for the option type.
+     * Combines high performance with WordPress standards for safety.
+     *
+     * @return string
+     */
+    public function get_type_class(): string {
+        $fullClass = get_class($this);
+        $className = substr($fullClass, strrpos($fullClass, '\\') + 1);
+        $kebab = strtolower(preg_replace('/([a-z])([A-Z])/', '$1-$2', $className));
+        return 'type-' . sanitize_html_class($kebab);
+    }
+
+    /**
      * Hàm tiện ích để render mô tả của trường.
      */
     public function render_description()
@@ -151,15 +164,6 @@ abstract class OptionAbstract
     }
 
     /**
-     * Lấy thuộc tính ID cho thẻ HTML.
-     * @since 1.0.0
-     * @return string
-     */
-    public function get_id_attribute() {
-        return $this->get_arg('id', sanitize_title($this->get_name_attribute()));
-    }
-
-    /**
      * Lấy tên (key) của tùy chọn.
      * @since 1.0.0
      * @return string
@@ -175,6 +179,57 @@ abstract class OptionAbstract
      */
     public function get_css() {
         return $this->get_arg('css', []);
+    }
+
+    /**
+     * Xây dựng đường dẫn (path) để truy cập giá trị của tùy chọn trong mảng options lớn.
+     * Sử dụng "dot notation". Ví dụ: 'tab_slug.section_slug.option_name'
+     * @since 1.0.0
+     * @return string
+     */
+    public function get_option_key_path() {
+        $keys = [];
+
+        if ($this->section->tab->is_option_level()) {
+            $keys[] = str_replace('-', '_', $this->section->tab->slug);
+        }
+
+        if ($this->section->is_option_level()) {
+            $keys[] = str_replace('-', '_', $this->section->slug);
+        }
+
+        $keys[] = $this->get_arg('name');
+        return implode('.', $keys);
+    }
+    
+    /**
+     * Lấy thuộc tính 'name' cho thẻ input, đã được định dạng cho mảng HTML.
+     * Ví dụ: 'option_group[tab_slug][section_slug][option_name]'
+     * @since 1.0.0
+     * @return string
+     */
+    public function get_name_attribute() {
+        $keys = explode('.', $this->get_option_key_path());
+        $wrapped = array_map(function ($key) {
+            return '['.$key.']';
+        }, $keys);
+        $inputName = implode('', $wrapped);
+        return $this->section->tab->settings->option_name.$inputName;
+    }
+    
+    /**
+     * Lấy thuộc tính ID cho thẻ HTML.
+     * @since 1.0.0
+     * @return string
+     */
+    public function get_id_attribute(): string {
+        if ($this->get_arg('id')) {
+            return sanitize_html_class($this->get_arg('id'));
+        }
+    
+        $name = $this->get_name_attribute(); // ví dụ: optimize-tweaks_option[meta][signature]
+        $id = str_replace(['[', ']', '.'], '_', $name); // chuyển về id-friendly
+        return sanitize_html_class(rtrim($id, '_'));
     }
 
     /**
@@ -216,8 +271,7 @@ abstract class OptionAbstract
      *
      * @return string The space-separated class names.
      */
-    public function get_row_classes()
-    {
+    public function get_row_classes() {
         $classes = [];
 
         // Lấy class tùy chỉnh từ mảng 'css'
@@ -226,8 +280,8 @@ abstract class OptionAbstract
         }
 
         // Kiểm tra nếu trường được khai báo là 'pro' => true
-        if ($this->get_arg('pro') === true) {
-            $classes[] = 'pro';
+        if ($this->is_pro_feature() && !$this->is_pro_user()) {
+            return 'pro';
         }
         
         return esc_attr(implode(' ', $classes));
@@ -247,42 +301,6 @@ abstract class OptionAbstract
      */
     public function is_pro_user() {
         return $this->section->tab->settings->config['is_pro'] ?? false;
-    }
-
-    /**
-     * Lấy thuộc tính 'name' cho thẻ input, đã được định dạng cho mảng HTML.
-     * Ví dụ: 'option_group[tab_slug][section_slug][option_name]'
-     * @since 1.0.0
-     * @return string
-     */
-    public function get_name_attribute() {
-        $keys = explode('.', $this->get_option_key_path());
-        $wrapped = array_map(function ($key) {
-            return '['.$key.']';
-        }, $keys);
-        $inputName = implode('', $wrapped);
-        return $this->section->tab->settings->option_name.$inputName;
-    }
-
-    /**
-     * Xây dựng đường dẫn (path) để truy cập giá trị của tùy chọn trong mảng options lớn.
-     * Sử dụng "dot notation". Ví dụ: 'tab_slug.section_slug.option_name'
-     * @since 1.0.0
-     * @return string
-     */
-    public function get_option_key_path() {
-        $keys = [];
-
-        if ($this->section->tab->is_option_level()) {
-            $keys[] = str_replace('-', '_', $this->section->tab->slug);
-        }
-
-        if ($this->section->is_option_level()) {
-            $keys[] = str_replace('-', '_', $this->section->slug);
-        }
-
-        $keys[] = $this->get_arg('name');
-        return implode('.', $keys);
     }
 
     /**
